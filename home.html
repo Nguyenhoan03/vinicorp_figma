@@ -7,9 +7,31 @@
     <title>Figma to HTML</title>
     <link rel="stylesheet" href="css/home/header.css">
     <link rel="stylesheet" href="css/home/banner.css">
+    <link rel="stylesheet" href="css/home/home.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<style>
+    .swiper {
+        width: 80%;
+        height: 361px;
+    }
+
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        background: #ddd;
+    }
+</style>
+
 
 <body>
     <header>
@@ -82,46 +104,333 @@
     </header>
     <main>
         <div class="bannerCarousel">
-            <div class="slideshow-container ">
+            <div class="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides myFade ">
-                  <div class="numbertext">1 / 3</div>
-                  <img src="images/promotional.png" style="width:100%;height:350px">
-                  <div class="text">Caption Text</div>
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/promotional.png" style="width:100%;height:350px">
+
                 </div>
-              
+
                 <div class="mySlides myFade">
-                  <div class="numbertext">2 / 3</div>
-                  <img src="https://c4.wallpaperflare.com/wallpaper/9/519/764/mountains-best-for-desktop-background-wallpaper-preview.jpg" style="width:100%;height:350px">
-                  <div class="text">Caption Two</div>
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://c4.wallpaperflare.com/wallpaper/9/519/764/mountains-best-for-desktop-background-wallpaper-preview.jpg"
+                        style="width:100%;height:350px">
+
                 </div>
-              
+
                 <div class="mySlides myFade">
-                  <div class="numbertext">3 / 3</div>
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFsV2XDI08OC9bcskxBoaU032M4bTjd5aDUg&s" style="width:100%;height:350px">
-                  <div class="text">Caption Three</div>
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFsV2XDI08OC9bcskxBoaU032M4bTjd5aDUg&s"
+                        style="width:100%;height:350px">
+
                 </div>
-              
+
+                <!-- The dots/circles -->
+                <div class="dots-wrappe" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-              </div>
-              <br>
-              
-              <!-- The dots/circles -->
-              <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-              </div>
+            </div>
+            <br>
+        </div>
+
+        <!-- featured Product -->
+        <section class="featured-products">
+            <h2 class="text-center mb-4">Featured Products</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="card__featured-product">
+                            <div class="card-actions">
+                                <button><i class="fa-regular fa-cart-shopping"></i></button>
+                                <button><i class="fa-regular fa-heart"></i></button>
+                                <button><i class="fa-light fa-magnifying-glass-plus"></i></button>
+                            </div>
+                            <img src="./images/Featured product.png" alt="Cantilever chair" class="product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Cantilever chair</h3>
+                                <div class="color-options">
+                                    <span class="color green"></span>
+                                    <span class="color purple"></span>
+                                    <span class="color blue"></span>
+                                </div>
+                                <p class="product-code">Code - Y523201</p>
+                                <p class="product-price">$42.00</p>
+                            </div>
+                        </div>
+                        <div class="card__featured-product">
+                            <div class="card-actions">
+                                <button><i class="fa-regular fa-cart-shopping"></i></button>
+                                <button><i class="fa-regular fa-heart"></i></button>
+                                <button><i class="fa-light fa-magnifying-glass-plus"></i></button>
+                            </div>
+                            <img src="./images/Featured product.png" alt="Cantilever chair" class="product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Cantilever chair</h3>
+                                <div class="color-options">
+                                    <span class="color green"></span>
+                                    <span class="color purple"></span>
+                                    <span class="color blue"></span>
+                                </div>
+                                <p class="product-code">Code - Y523201</p>
+                                <p class="product-price">$42.00</p>
+                            </div>
+                        </div>
+                        <div class="card__featured-product">
+                            <div class="card-actions">
+                                <button><i class="fa-regular fa-cart-shopping"></i></button>
+                                <button><i class="fa-regular fa-heart"></i></button>
+                                <button><i class="fa-light fa-magnifying-glass-plus"></i></button>
+                            </div>
+                            <img src="./images/Featured product.png" alt="Cantilever chair" class="product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Cantilever chair</h3>
+                                <div class="color-options">
+                                    <span class="color green"></span>
+                                    <span class="color purple"></span>
+                                    <span class="color blue"></span>
+                                </div>
+                                <p class="product-code">Code - Y523201</p>
+                                <p class="product-price">$42.00</p>
+                            </div>
+                        </div>
+                        <div class="card__featured-product">
+                            <div class="card-actions">
+                                <button><i class="fa-regular fa-cart-shopping"></i></button>
+                                <button><i class="fa-regular fa-heart"></i></button>
+                                <button><i class="fa-light fa-magnifying-glass-plus"></i></button>
+                            </div>
+                            <img src="./images/Featured product.png" alt="Cantilever chair" class="product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Cantilever chair</h3>
+                                <div class="color-options">
+                                    <span class="color green"></span>
+                                    <span class="color purple"></span>
+                                    <span class="color blue"></span>
+                                </div>
+                                <p class="product-code">Code - Y523201</p>
+                                <p class="product-price">$42.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="card__featured-product">
+                            <div class="card-actions">
+                                <button><i class="fa-regular fa-cart-shopping"></i></button>
+                                <button><i class="fa-regular fa-heart"></i></button>
+                                <button><i class="fa-light fa-magnifying-glass-plus"></i></button>
+                            </div>
+                            <img src="./images/Featured product.png" alt="Cantilever chair" class="product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Cantilever chair</h3>
+                                <div class="color-options">
+                                    <span class="color green"></span>
+                                    <span class="color purple"></span>
+                                    <span class="color blue"></span>
+                                </div>
+                                <p class="product-code">Code - Y523201</p>
+                                <p class="product-price">$42.00</p>
+                            </div>
+                        </div>
+                        <div class="card__featured-product">
+                            <div class="card-actions">
+                                <button><i class="fa-regular fa-cart-shopping"></i></button>
+                                <button><i class="fa-regular fa-heart"></i></button>
+                                <button><i class="fa-light fa-magnifying-glass-plus"></i></button>
+                            </div>
+                            <img src="./images/Featured product.png" alt="Cantilever chair" class="product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Cantilever chair</h3>
+                                <div class="color-options">
+                                    <span class="color green"></span>
+                                    <span class="color purple"></span>
+                                    <span class="color blue"></span>
+                                </div>
+                                <p class="product-code">Code - Y523201</p>
+                                <p class="product-price">$42.00</p>
+                            </div>
+                        </div>
+                        <div class="card__featured-product">
+                            <div class="card-actions">
+                                <button><i class="fa-regular fa-cart-shopping"></i></button>
+                                <button><i class="fa-regular fa-heart"></i></button>
+                                <button><i class="fa-light fa-magnifying-glass-plus"></i></button>
+                            </div>
+                            <img src="./images/Featured product.png" alt="Cantilever chair" class="product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Cantilever chair</h3>
+                                <div class="color-options">
+                                    <span class="color green"></span>
+                                    <span class="color purple"></span>
+                                    <span class="color blue"></span>
+                                </div>
+                                <p class="product-code">Code - Y523201</p>
+                                <p class="product-price">$42.00</p>
+                            </div>
+                        </div>
+                        <div class="card__featured-product">
+                            <div class="card-actions">
+                                <button><i class="fa-regular fa-cart-shopping"></i></button>
+                                <button><i class="fa-regular fa-heart"></i></button>
+                                <button><i class="fa-light fa-magnifying-glass-plus"></i></button>
+                            </div>
+                            <img src="./images/Featured product.png" alt="Cantilever chair" class="product-image" />
+                            <div class="product-info">
+                                <h3 class="product-name">Cantilever chair</h3>
+                                <div class="color-options">
+                                    <span class="color green"></span>
+                                    <span class="color purple"></span>
+                                    <span class="color blue"></span>
+                                </div>
+                                <p class="product-code">Code - Y523201</p>
+                                <p class="product-price">$42.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Thêm slide nếu có nhiều sản phẩm -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+
+        <!--  -->
+
+        <section class="mt-5">
+            <div class="Leatest-Products text-center">
+                <h2>Leatest Products</h2>
+                <div class="navigate-options">
+                    <span>New Arrival</span>
+                    <span>Best Seller</span>
+                    <span>Featured</span>
+                    <span>Special Offer</span>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="">
+
         </div>
     </main>
-    <footer>
-        <!-- Footer content will go here -->
+
+    <footer class="bg-light py-5 text-secondary mt-3">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4">
+                    <h3 class="h4 fw-bold mb-3 text-dark">Hekto</h3>
+                    <div class="mb-4">
+                        <p class="mb-2">Đăng ký nhận tin:</p>
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter Email Address" class="form-control">
+                            <button class="btn text-white" style="background-color: #FF1B6A;">Sign Up</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="fw-semibold">Contact Info</p>
+                        <p class="small">17 Princess Road, London, Greater London NW1 8JR, UK</p>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-2">
+                    <h4 class="h6 fw-semibold mb-3 text-dark">Categories</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Laptops & Computers</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Cameras &
+                                Photography</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Smart Phones &
+                                Tablets</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Video Games &
+                                Consoles</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Waterproof
+                                Headphones</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <h4 class="h6 fw-semibold mb-3 text-dark">Customer Care</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">My Account</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Discount</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Returns</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Orders History</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Order Tracking</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <h4 class="h6 fw-semibold mb-3 text-dark">Pages</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Browse the Shop</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Category</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Pre-Built Pages</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Visual Composer
+                                Elements</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WooCommerce Pages</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row mt-4 pt-3 border-top border-light align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <p class="mb-0 small text-secondary">&copy;Webecy - All Rights Reserved</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <div class="d-inline-flex mt-3 mt-md-0">
+
+                        <a href="#" class="text-secondary me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-secondary me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <script src="js/home/banner.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+
 </body>
 
 </html>
