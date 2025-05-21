@@ -14,11 +14,57 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background-color: red; */
+
 }
 
-.background {
-    background: #E5E5E5;
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
 }
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Tùy biến theo hướng */
+/* .fade-up {
+    transform: translateY(20px) scale(0.98);
+    overflow-x: hidden;
+}
+
+.fade-left {
+    transform: translateX(-20px) scale(0.98);
+    overflow-x: hidden;
+}
+
+.fade-right {
+    transform: translateX(20px) scale(0.98);
+    overflow-x: hidden;
+} */
+
+.footer-social a i {
+    background-color: rgb(0, 0, 122);
+}
+
+.reveal:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.reveal:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.reveal:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
 
 footer {
     background: #616df7;
@@ -35,6 +81,7 @@ footer {
     max-width: 1600px;
     margin: 0 auto;
     padding-bottom: 40px;
+    position: relative;
 }
 
 .swiper-wrapper {
@@ -204,16 +251,16 @@ footer {
 
 .swiper-pagination {
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     left: 50%;
 }
 
 .swiper-pagination-bullet {
-    width: 25px !important;
+    width: 20px !important;
     height: 4px !important;
     border-radius: 6px !important;
     background: #FFB6DE !important;
-    opacity: 1 !important;
+    opacity: 0.5 !important;
     margin: 0 6px !important;
     border: none !important;
     transition: background 0.3s, width 0.3s !important;
@@ -222,10 +269,11 @@ footer {
 
 .swiper-pagination-bullet-active {
     background: #FB2E86 !important;
-    width: 29px !important;
+    width: 23px !important;
     height: 4px !important;
     border-radius: 2px !important;
     margin-top: 15px !important;
+    opacity: 0.7;
 
 }
 
@@ -235,12 +283,18 @@ footer {
     margin: 0 15px;
 }
 
+.featured-products {
+    position: relative;
+}
+
 .leatest-products__title,
 .featured-products__title {
     font-size: var(--font-size-title);
     font-family: var(--font-family-title);
     color: var(--color-title);
 }
+
+
 
 .latest-products__option span {
     margin: 0 15px;
@@ -260,8 +314,22 @@ footer {
 
 }
 
+/* .latest-products__item:hover .latest-products__img-wrapper {
+    opacity: 1;
+} */
+
+.latest-products__item:hover .latest-products__badge {
+    transform: rotate(-20deg);
+    border-radius: 8px 18px 0 8px;
+    opacity: 1;
+}
+.latest-products__item:hover .latest-products__actions {
+ 
+    opacity: 1;
+}
+
 .latest-products__img-wrapper {
-    position: relative;
+    opacity: 1;
     width: 300px;
     height: 270px;
     background: #F6F7FB;
@@ -272,17 +340,25 @@ footer {
 }
 
 .latest-products__badge {
+    opacity: 0;
     position: absolute;
-    top: 10px;
-    left: 0;
+    top: 20px;
+    left: 10px;
     background: #3F43D7;
     color: #fff;
     font-size: 14px;
     font-weight: 600;
     padding: 4px 18px 4px 10px;
-    border-radius: 8px 0 12px 0;
+    border-radius: 18px 0 20px 0;
     z-index: 2;
+    width:90px;
     box-shadow: 0 2px 8px rgba(63, 67, 215, 0.08);
+     transition:
+        opacity 0.3s cubic-bezier(0.4,0,0.2,1),
+        transform 0.4s cubic-bezier(0.4,0,0.2,1),
+        border-radius 0.4s cubic-bezier(0.4,0,0.2,1),
+        left 0.4s cubic-bezier(0.4,0,0.2,1),
+        top 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 
 .latest-products__img {
@@ -296,11 +372,12 @@ footer {
 .latest-products__actions {
     position: absolute;
     left: 10px;
-    top: 40px;
+    bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     z-index: 2;
+    opacity: 0;
 }
 
 .latest-products__actions button {
@@ -358,20 +435,24 @@ footer {
     margin-left: 4px;
 }
 
-/* Shopex Offer Section */
 .shopex-offer__card {
-    width: 260px;
+    width: 100%;
+    max-width: 260px;
     height: 320px;
     background: #fff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     border: 2px solid transparent;
+    border-radius: 12px;
 }
 
-
+.shopex-offer__card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+}
 
 .shopex-offer__card-content {
     width: 100%;
@@ -414,6 +495,7 @@ footer {
 }
 
 
+
 .image_adv {
     background-color: #F1F0FF;
     width: 100%;
@@ -449,7 +531,7 @@ footer {
 
 .image_adv__content {
     flex: 1 1 0;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -462,7 +544,7 @@ footer {
     font-weight: 700;
     margin-bottom: 32px;
     line-height: 1.2;
-    width:507px;
+    width: 507px;
 }
 
 .image_adv__features {
@@ -487,9 +569,18 @@ footer {
     border-radius: 50%;
     margin-right: 12px;
 }
-.dot--pink { background: #FB2E86; }
-.dot--purple { background: #9F63B5; }
-.dot--green { background: #2BD9AF; }
+
+.dot--pink {
+    background: #FB2E86;
+}
+
+.dot--purple {
+    background: #9F63B5;
+}
+
+.dot--green {
+    background: #2BD9AF;
+}
 
 .image_adv__actions {
     display: flex;
@@ -689,6 +780,8 @@ footer {
     margin-bottom: 24px;
     gap: 32px;
 }
+
+
 
 .discount-item__tab {
     color: #2F1AC4;
@@ -946,7 +1039,7 @@ footer {
 
 .img-banner {
     width: 100%;
-    height: 300px; 
+    height: 300px;
     background-image: url("../../images/Rectangle\ 102.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -960,16 +1053,18 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100%;
-   
+
     text-align: center;
 }
+
 .img-banner__title {
-     width: 504px;
+    width: 504px;
     font-size: 35px;
     font-family: var(--font-family-title);
     color: var(--color-title);
     margin-bottom: 16px;
 }
+
 .img-banner__btn {
     font-size: 17px;
     font-family: var(--font-family-title);
@@ -986,15 +1081,17 @@ footer {
 
 
 .brand {
-    width:60%;
+    width: 60%;
     margin: auto;
 }
+
 .brand-logo {
     width: 110px;
     height: 67px;
     object-fit: contain;
-  
+
 }
+
 .brand-logo:hover {
     opacity: 1;
 }
@@ -1112,4 +1209,109 @@ footer {
 
 .leatest-blog__readmore--highlight {
     color: #FB2E86;
+}
+
+
+
+.footer-container {
+    background-color: #E7E4F8;
+    border-top: 1px solid #d3d3d3;
+    padding: 10px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-text {
+    margin: 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.footer-right a {
+    color: #6c757d;
+    margin-left: 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-right a:first-child {
+    margin-left: 0;
+}
+
+
+.leatest-tabs {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.leatest-tab {
+    font-size: 18px;
+    color: #2F1AC4;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0 8px 6px 8px;
+    position: relative;
+    transition: color 0.2s;
+    box-shadow: none;
+}
+
+.leatest-tab--active,
+.leatest-tab:focus,
+.leatest-tab:hover {
+    color: #FF1B6A;
+}
+
+.leatest-tab--active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #FF1B6A;
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+    width: 100%;
+}
+
+.leatest-tab::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    height: 2px;
+    background: #FF1B6A;
+    border-radius: 2px;
+    width: 0;
+    transition: width 0.3s cubic-bezier(0.4,0,0.2,1), left 0.3s, right 0.3s;
+}
+
+.leatest-tab:hover:not(.leatest-tab--active)::after,
+.leatest-tab:focus:not(.leatest-tab--active)::after {
+    left: 0;
+    right: 0;
+    width: 100%;
 }

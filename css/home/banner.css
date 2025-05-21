@@ -5,8 +5,8 @@
 .slideshow-container {
   position: relative;
   width: 100%;
-  height: 350px;
-  overflow: hidden; /* Thêm dòng này để tránh tràn */
+  height: 450px;
+  overflow: hidden;
 }
 
 .mySlides {
