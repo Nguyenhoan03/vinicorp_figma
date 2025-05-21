@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+main {
+    padding-top: 127px;
+}
+header {
+    transition: opacity 0.2s;
+}
+header.header-fade {
+     opacity: 0.6;
+    transition: opacity 0.3s;
+}
+header.header-fade:hover {
+    opacity: 1;
+}
+
+:root {
+    /* --width-color-option: 15px;
+    --height-color-option: 3px; */
+
+    --color-title: #101750;
+    --font-family-title: "Josefin Sans";
+    /* --font-size-title: 42px; */
+
+
+}
+.banner-shoplist {
+    background-color: #F6F5FF;
+    width: 100%;
+   height: 196px;
+}
+.banner-shoplist__content {
+    align-items: center;
+}
+.breadcrumb-link{
+    color: red;
+}
+.banner-shoplist .banner-shoplist__title {
+    font-family: var(--font-family-title);
+    font-size: 36px;
+    color: var(--color-title);
+    text-align: start;
+    padding-top: 50px;
+  
+    font-weight: 700;
+}
+.banner-shoplist__content ul {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: -18px;
+}
+.banner-shoplist__content ul li {
+    list-style-type: none;
+}
+.banner-shoplist__content ul li a {
+    text-decoration: none;
+    
+}
+
+
+.thumb-img {
+    width: 151px;
+    height: 125px;
+    padding: 5px;
+}
+
+.main-img {
+    height: 365px;
+    width: 375px 
+}
+.product-detail__main-img {
+    margin-left: -13px;
+}
+.product-title{
+    font-size: 36px;
+    font-family: var(--font-family-title);
+    font-weight: 600;
+    counter-reset: #0D134E;
+}
+
+.product-detail__rating {
+  
+     color: #f7b32b;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      align-content: center;
+      padding-top: 12px;
+}
+.product-detail__rating__count {
+    color: #151875;
+    font-size: 14px;
+}
