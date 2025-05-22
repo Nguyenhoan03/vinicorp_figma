@@ -222,3 +222,8 @@ a{
     .product-info__title {
         width: 310px;
     }
+
+    .product-title a {
+      text-decoration: none;
+      color: #111C85;
+    }

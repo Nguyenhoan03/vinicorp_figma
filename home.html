@@ -152,10 +152,10 @@
         <section class="fade-up reveal featured-products">
             <h2 class="text-center mb-4 featured-products__title">Featured Products</h2>
             <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper container">
                     <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="card__featured-product">
+                    <div class="swiper-slide row">
+                        <div class="card__featured-product col-12 col-md-3">
                             <div class="card-actions">
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                                 <button><i class="fa-regular fa-heart"></i></button>
@@ -173,7 +173,7 @@
                                 <p class="product-price">$42.00</p>
                             </div>
                         </div>
-                        <div class="card__featured-product">
+                        <div class="card__featured-product col-12 col-md-3">
                             <div class="card-actions">
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                                 <button><i class="fa-regular fa-heart"></i></button>
@@ -191,7 +191,7 @@
                                 <p class="product-price">$42.00</p>
                             </div>
                         </div>
-                        <div class="card__featured-product">
+                        <div class="card__featured-product col-12 col-md-3">
                             <div class="card-actions">
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                                 <button><i class="fa-regular fa-heart"></i></button>
@@ -209,7 +209,7 @@
                                 <p class="product-price">$42.00</p>
                             </div>
                         </div>
-                        <div class="card__featured-product">
+                        <div class="card__featured-product col-12 col-md-3">
                             <div class="card-actions">
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                                 <button><i class="fa-regular fa-heart"></i></button>
@@ -230,7 +230,7 @@
                     </div>
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
-                        <div class="card__featured-product">
+                        <div class="card__featured-product col-12 col-md-3">
                             <div class="card-actions">
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                                 <button><i class="fa-regular fa-heart"></i></button>
@@ -248,7 +248,7 @@
                                 <p class="product-price">$42.00</p>
                             </div>
                         </div>
-                        <div class="card__featured-product">
+                        <div class="card__featured-product col-12 col-md-3">
                             <div class="card-actions">
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                                 <button><i class="fa-regular fa-heart"></i></button>
@@ -266,7 +266,7 @@
                                 <p class="product-price">$42.00</p>
                             </div>
                         </div>
-                        <div class="card__featured-product">
+                        <div class="card__featured-product col-12 col-md-3">
                             <div class="card-actions">
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                                 <button><i class="fa-regular fa-heart"></i></button>
@@ -284,7 +284,7 @@
                                 <p class="product-price">$42.00</p>
                             </div>
                         </div>
-                        <div class="card__featured-product">
+                        <div class="card__featured-product col-12 col-md-3">
                             <div class="card-actions">
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                                 <button><i class="fa-regular fa-heart"></i></button>
@@ -1269,7 +1269,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    observer.unobserve(entry.target); // chỉ chạy 1 lần
+                    observer.unobserve(entry.target); 
                 }
             });
         }, {

@@ -175,7 +175,7 @@
         </section>
 
 
-        <section class="desc-productdetail mt-5 mb-5 pb-5">
+        <section class="desc-productdetail mt-5 mb-5 pb-5 fade-in-up" >
             <div class="container pt-5">
                 <div class="desc-productdetail__category d-flex">
                     <p class="active" data-tab="desc">Description</p>
@@ -256,7 +256,7 @@
         </section>
 
 
-        <section class="relate-product mt-5 mb-5">
+        <section class="relate-product mt-5 mb-5 fade-in-up">
             <div class="container">
                 <h2 class="relate-title mb-4">Related Products</h2>
                 <div class="relate-grid pt-3">
@@ -499,4 +499,23 @@
     });
 </script>
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.fade-in-up').forEach(function(section) {
+            const observer = new IntersectionObserver(
+                function (entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+            observer.observe(section);
+        });
+    });
+</script>
 </html>
