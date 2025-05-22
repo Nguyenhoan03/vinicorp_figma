@@ -82,7 +82,17 @@
                     <div class="col-lg-1 logo">Hekto</div>
                     <div class="col-lg-7">
                         <nav class="main-nav d-flex align-items-center gap-4">
-                            <a href="#" class="active">Home <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="dropdown">
+                                <a href="#" class="active dropdown-toggle" id="dropdownHome" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Home <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownHome">
+                                    <li><a class="dropdown-item" href="./home.html">Home page</a></li>
+                                    <li><a class="dropdown-item" href="./shoplist.html">Shoplist</a></li>
+                                    <li><a class="dropdown-item" href="./productdetail.html">Product detail</a></li>
+                                </ul>
+                            </div>
                             <a href="#">Pages</a>
                             <a href="#">Products</a>
                             <a href="#">Blog</a>
@@ -293,7 +303,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <!-- <div class="swiper-pagination"></div> -->
@@ -306,146 +316,326 @@
         <section class="fade-left reveal">
             <div class="leatest-products text-center">
                 <h2 class="leatest-products__title">Leatest Products</h2>
-                <!-- <div class="latest-products__option">
-                    <span>New Arrival</span>
-                    <span>Best Seller</span>
-                    <span>Featured</span>
-                    <span>Special Offer</span>
-                </div> -->
+
                 <div class="leatest-tabs d-flex justify-content-center align-items-center gap-4">
-                    <span class="leatest-tab leatest-tab--active">
-                        New Arrival
-                    </span>
-                    <span class="leatest-tab">
-                        Best Seller
-                    </span>
-                    <span class="leatest-tab">
-                        Featured
-                    </span>
-                    <span class="leatest-tab">
-                        Special Offer
-                    </span>
+                    <span class="leatest-tab leatest-tab--active" data-tab="new">New Arrival</span>
+                    <span class="leatest-tab" data-tab="best">Best Seller</span>
+                    <span class="leatest-tab" data-tab="featured">Featured</span>
+                    <span class="leatest-tab" data-tab="special">Special Offer</span>
                 </div>
                 <div class="leatest-products__content pt-5 container">
-                    <div class="row justify-content-center g-4">
-                        <div class="col-12 col-md-4">
-                            <div class="latest-products__item">
-                                <div class="latest-products__img-wrapper position-relative">
-                                    <img src="./images/image 23.png" alt="Comfort Handy Craft"
-                                        class="latest-products__img" />
-                                    <span class="latest-products__badge">Sale</span>
-                                    <div class="latest-products__actions">
-                                        <button class="latest-products__action-btn"><i
-                                                class="fa-solid fa-cart-shopping"></i></button>
-                                        <button class="latest-products__action-btn"><i
-                                                class="fa-regular fa-heart"></i></button>
-                                        <button class="latest-products__action-btn"><i
-                                                class="fa-solid fa-magnifying-glass"></i></button>
+
+                    <div class="leatest-tab-pane active" id="tab-new">
+                        <!-- Nội dung New Arrival -->
+                        <div class="row justify-content-center g-4">
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper position-relative">
+                                        <img src="./images/image 23.png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <span class="latest-products__badge">Sale</span>
+                                        <div class="latest-products__actions">
+                                            <button class="latest-products__action-btn"><i
+                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button class="latest-products__action-btn"><i
+                                                    class="fa-regular fa-heart"></i></button>
+                                            <button class="latest-products__action-btn"><i
+                                                    class="fa-solid fa-magnifying-glass"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
                                     </div>
                                 </div>
-                                <div class="latest-products__info">
-                                    <span class="latest-products__name">Comfort Handy Craft</span>
-                                    <span class="latest-products__price">$42.00</span>
-                                    <span class="latest-products__price latest-products__price--old">$65.00</span>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/image 23.png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/image 23.png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-4">
-                            <div class="latest-products__item">
-                                <div class="latest-products__img-wrapper">
-                                    <span class="latest-products__badge">Sale</span>
-                                    <img src="./images/image 23.png" alt="Comfort Handy Craft"
-                                        class="latest-products__img" />
-                                    <div class="latest-products__actions">
-                                        <button><i class="fa-solid fa-cart-shopping"></i></button>
-                                        <button><i class="fa-regular fa-heart"></i></button>
-                                        <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                        <div class="row justify-content-center g-4 mt-5">
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/image 23.png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="latest-products__info">
-                                    <span class="latest-products__name">Comfort Handy Craft</span>
-                                    <span class="latest-products__price">$42.00</span>
-                                    <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="latest-products__item">
-                                <div class="latest-products__img-wrapper">
-                                    <span class="latest-products__badge">Sale</span>
-                                    <img src="./images/image 23.png" alt="Comfort Handy Craft"
-                                        class="latest-products__img" />
-                                    <div class="latest-products__actions">
-                                        <button><i class="fa-solid fa-cart-shopping"></i></button>
-                                        <button><i class="fa-regular fa-heart"></i></button>
-                                        <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/image 23.png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
                                     </div>
                                 </div>
-                                <div class="latest-products__info">
-                                    <span class="latest-products__name">Comfort Handy Craft</span>
-                                    <span class="latest-products__price">$42.00</span>
-                                    <span class="latest-products__price latest-products__price--old">$65.00</span>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/image 23.png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-center g-4 mt-5">
-                        <div class="col-12 col-md-4">
-                            <div class="latest-products__item">
-                                <div class="latest-products__img-wrapper">
-                                    <span class="latest-products__badge">Sale</span>
-                                    <img src="./images/image 23.png" alt="Comfort Handy Craft"
-                                        class="latest-products__img" />
-                                    <div class="latest-products__actions">
-                                        <button><i class="fa-solid fa-cart-shopping"></i></button>
-                                        <button><i class="fa-regular fa-heart"></i></button>
-                                        <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <div class="leatest-tab-pane" id="tab-best">
+                        <!-- Nội dung Best Seller -->
+                        <div class="row justify-content-center g-4">
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/box for image (3).png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
                                     </div>
                                 </div>
-                                <div class="latest-products__info">
-                                    <span class="latest-products__name">Comfort Handy Craft</span>
-                                    <span class="latest-products__price">$42.00</span>
-                                    <span class="latest-products__price latest-products__price--old">$65.00</span>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/box for image (3).png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/box for image (3).png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thêm các sản phẩm khác tương tự -->
                         </div>
-                        <div class="col-12 col-md-4">
-                            <div class="latest-products__item">
-                                <div class="latest-products__img-wrapper">
-                                    <span class="latest-products__badge">Sale</span>
-                                    <img src="./images/image 23.png" alt="Comfort Handy Craft"
-                                        class="latest-products__img" />
-                                    <div class="latest-products__actions">
-                                        <button><i class="fa-solid fa-cart-shopping"></i></button>
-                                        <button><i class="fa-regular fa-heart"></i></button>
-                                        <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    </div>
+                    <div class="leatest-tab-pane" id="tab-featured">
+                        <!-- Nội dung Featured -->
+                        <div class="row justify-content-center g-4">
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/box for image (2).png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
                                     </div>
                                 </div>
-                                <div class="latest-products__info">
-                                    <span class="latest-products__name">Comfort Handy Craft</span>
-                                    <span class="latest-products__price">$42.00</span>
-                                    <span class="latest-products__price latest-products__price--old">$65.00</span>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/box for image (2).png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/box for image (2).png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thêm các sản phẩm khác tương tự -->
                         </div>
-                        <div class="col-12 col-md-4">
-                            <div class="latest-products__item">
-                                <div class="latest-products__img-wrapper">
-                                    <span class="latest-products__badge">Sale</span>
-                                    <img src="./images/image 23.png" alt="Comfort Handy Craft"
-                                        class="latest-products__img" />
-                                    <div class="latest-products__actions">
-                                        <button><i class="fa-solid fa-cart-shopping"></i></button>
-                                        <button><i class="fa-regular fa-heart"></i></button>
-                                        <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    </div>
+                    <div class="leatest-tab-pane" id="tab-special">
+                        <!-- Nội dung Special Offer -->
+                        <div class="row justify-content-center g-4">
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/box for image (1).png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
                                     </div>
                                 </div>
-                                <div class="latest-products__info">
-                                    <span class="latest-products__name">Comfort Handy Craft</span>
-                                    <span class="latest-products__price">$42.00</span>
-                                    <span class="latest-products__price latest-products__price--old">$65.00</span>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/box for image (1).png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-12 col-md-4">
+                                <div class="latest-products__item">
+                                    <div class="latest-products__img-wrapper">
+                                        <span class="latest-products__badge">Sale</span>
+                                        <img src="./images/box for image (1).png" alt="Comfort Handy Craft"
+                                            class="latest-products__img" />
+                                        <div class="latest-products__actions">
+                                            <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                            <button><i class="fa-regular fa-heart"></i></button>
+                                            <button><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="latest-products__info">
+                                        <span class="latest-products__name">Comfort Handy Craft</span>
+                                        <span class="latest-products__price">$42.00</span>
+                                        <span class="latest-products__price latest-products__price--old">$65.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thêm các sản phẩm khác tương tự -->
                         </div>
                     </div>
                 </div>
@@ -656,50 +846,115 @@
         <section class="fade-right reveal discount-item mt-5 mb-5">
             <h2 class="discount-item__title text-center mb-4">Discount Item</h2>
             <div class="discount-item__tabs d-flex justify-content-center align-items-center gap-4">
-                <span class="discount-item__tab discount-item__tab--active">
+                <span class="discount-item__tab discount-item__tab--active" data-tab="wood">
                     Wood Chair
                     <span class="discount-item__dot"></span>
                 </span>
-                <span class="discount-item__tab pl-3">
+                <span class="discount-item__tab pl-3" data-tab="plastic">
                     Plastic Chair
                     <span class="discount-item__dot"></span>
                 </span>
-                <span class="discount-item__tab">
-                    Sofa Colletion
+                <span class="discount-item__tab" data-tab="sofa">
+                    Sofa Collection
                     <span class="discount-item__dot"></span>
                 </span>
             </div>
-            <div class="discount-item__content">
-                <div class="discount-item__info">
-                    <h3 class="discount-item__big-title">20% Discount Of All Products</h3>
-                    <div class="discount-item__product-name">Eams Sofa Compact</div>
-                    <div class="discount-item__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec, bibendum
-                        condimentum.
+            <div class="discount-item__content-wrapper">
+                <!-- Tab 1 -->
+                <div class="discount-item__content discount-item__content--active" id="discount-tab-wood">
+                    <div class="discount-item__info">
+                        <h3 class="discount-item__big-title">20% Discount Of All Products</h3>
+                        <div class="discount-item__product-name">Eams Sofa Compact</div>
+                        <div class="discount-item__desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec,
+                            bibendum condimentum.
+                        </div>
+                        <div class="discount-item__features">
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>Material expose like metals</span>
+                            </div>
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>Clear lines and geometric figures</span>
+                            </div>
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>Simple neutral colours.</span>
+                            </div>
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>Material expose like metals</span>
+                            </div>
+                        </div>
+                        <button class="discount-item__btn">Shop Now</button>
                     </div>
-                    <div class="discount-item__features">
-                        <div class="discount-item__feature">
-                            <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
-                            <span>Material expose like metals</span>
-                        </div>
-                        <div class="discount-item__feature">
-                            <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
-                            <span>Clear lines and geometric figures</span>
-                        </div>
-                        <div class="discount-item__feature">
-                            <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
-                            <span>Simple neutral colours.</span>
-                        </div>
-                        <div class="discount-item__feature">
-                            <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
-                            <span>Material expose like metals</span>
+                    <div class="discount-item__img-wrapper">
+                        <div class="discount-item__img-bg">
+                            <img src="./images/Group 154 (1).png" alt="" class="discount-item__img" />
                         </div>
                     </div>
-                    <button class="discount-item__btn">Shop Now</button>
                 </div>
-                <div class="discount-item__img-wrapper">
-                    <div class="discount-item__img-bg">
-                        <img src="./images/Group 154 (1).png" alt="" class="discount-item__img" />
+                <!-- Tab 2 -->
+                <div class="discount-item__content" id="discount-tab-plastic">
+                    <div class="discount-item__info">
+                        <h3 class="discount-item__big-title">15% Discount On Plastic Chairs</h3>
+                        <div class="discount-item__product-name">Modern Plastic Chair</div>
+                        <div class="discount-item__desc">
+                            Plastic chairs with modern design, lightweight and durable for your home.
+                        </div>
+                        <div class="discount-item__features">
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>High quality plastic</span>
+                            </div>
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>Easy to clean</span>
+                            </div>
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>Various colors</span>
+                            </div>
+                        </div>
+                        <button class="discount-item__btn">Shop Now</button>
+                    </div>
+                    <div class="discount-item__img-wrapper">
+                        <div class="discount-item__img-bg">
+                            <img src="./images/Component 3.png" style="border-radius: 50%;" alt=""
+                                class="discount-item__img" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab 3 -->
+                <div class="discount-item__content" id="discount-tab-sofa">
+                    <div class="discount-item__info">
+                        <h3 class="discount-item__big-title">30% Discount On Sofa Collection</h3>
+                        <div class="discount-item__product-name">Luxury Sofa Set</div>
+                        <div class="discount-item__desc">
+                            Upgrade your living room with our premium sofa collection at a great price.
+                        </div>
+                        <div class="discount-item__features">
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>Premium fabric</span>
+                            </div>
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>Modern design</span>
+                            </div>
+                            <div class="discount-item__feature">
+                                <span class="discount-item__check"><i class="fa-solid fa-check"></i></span>
+                                <span>Comfortable seating</span>
+                            </div>
+                        </div>
+                        <button class="discount-item__btn">Shop Now</button>
+                    </div>
+                    <div class="discount-item__img-wrapper">
+                        <div class="discount-item__img-bg">
+                            <img src="./images/Component 4.png" style="border-radius: 50%;" alt=""
+                                class="discount-item__img" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1027,25 +1282,53 @@
     </script>
 
     <script>
- 
-    document.querySelectorAll('.leatest-tab').forEach(tab => {
-        tab.addEventListener('click', function () {
-            document.querySelectorAll('.leatest-tab').forEach(t => t.classList.remove('leatest-tab--active'));
-            this.classList.add('leatest-tab--active');
-        });
-    });
-</script>
 
-<script>
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.classList.add('header-fade');
-    } else {
-        header.classList.remove('header-fade');
-    }
-});
-</script>
+        document.querySelectorAll('.leatest-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                document.querySelectorAll('.leatest-tab').forEach(t => t.classList.remove('leatest-tab--active'));
+                this.classList.add('leatest-tab--active');
+            });
+        });
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-fade');
+            } else {
+                header.classList.remove('header-fade');
+            }
+        });
+    </script>
+
+    <script>
+
+        document.querySelectorAll('.leatest-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+
+                document.querySelectorAll('.leatest-tab').forEach(t => t.classList.remove('leatest-tab--active'));
+                this.classList.add('leatest-tab--active');
+
+                const tabName = this.getAttribute('data-tab');
+                document.querySelectorAll('.leatest-tab-pane').forEach(pane => pane.classList.remove('active'));
+                document.getElementById('tab-' + tabName).classList.add('active');
+            });
+        });
+    </script>
+
+    <script>
+
+        document.querySelectorAll('.discount-item__tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                document.querySelectorAll('.discount-item__tab').forEach(t => t.classList.remove('discount-item__tab--active'));
+                this.classList.add('discount-item__tab--active');
+                const tabName = this.getAttribute('data-tab');
+                document.querySelectorAll('.discount-item__content').forEach(c => c.classList.remove('discount-item__content--active'));
+                document.getElementById('discount-tab-' + tabName).classList.add('discount-item__content--active');
+            });
+        });
+    </script>
 </body>
 
 </html>

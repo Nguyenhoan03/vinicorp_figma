@@ -68,7 +68,17 @@
                     <div class="col-lg-1 logo">Hekto</div>
                     <div class="col-lg-7">
                         <nav class="main-nav d-flex align-items-center gap-4">
-                            <a href="#" class="active">Home <i class="fa-solid fa-chevron-down"></i></a>
+                           <div class="dropdown">
+                                <a href="#" class="active dropdown-toggle" id="dropdownHome" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Home <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                 <ul class="dropdown-menu" aria-labelledby="dropdownHome">
+                                    <li><a class="dropdown-item" href="./home.html">Home page</a></li>
+                                    <li><a class="dropdown-item" href="./shoplist.html">Shoplist</a></li>
+                                    <li><a class="dropdown-item" href="./productdetail.html">Product detail</a></li>
+                                </ul>
+                            </div>
                             <a href="#">Pages</a>
                             <a href="#">Products</a>
                             <a href="#">Blog</a>

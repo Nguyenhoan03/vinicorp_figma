@@ -394,37 +394,35 @@ header.header-fade:hover {
 
 .latest-products__info {
     display: flex;
-    align-items: center;
-    gap: 8px;
-
-    font-size: 16px;
+     padding-top: 5px;
 }
 
 .latest-products__name {
     color: var(--color-title);
     font-family: var(--font-family-title);
-    font-weight: 600;
+ 
     flex: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 16px;
     line-height: auto;
+    text-align: start;
 }
 
 .latest-products__price {
     color: var(--color-title);
-    font-weight: 700;
     margin-left: 4px;
     font-size: 14px;
 }
 
 .latest-products__price--old {
     color: #FB2448;
-    font-weight: 500;
     text-decoration: line-through;
     font-size: 12px;
     margin-left: 4px;
+    margin-right: 12px;
+    padding: 2px 0 5px 0;
 }
 
 .shopex-offer__card {
@@ -1277,3 +1275,11 @@ header.header-fade:hover {
     right: 0;
     width: 100%;
 }
+
+
+.leatest-tab-pane { display: none; }
+.leatest-tab-pane.active { display: block; }
+
+
+.discount-item__content { display: none; }
+.discount-item__content--active { display: flex; }
