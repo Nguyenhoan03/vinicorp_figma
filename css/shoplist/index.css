@@ -16,7 +16,9 @@ header.header-fade {
 header.header-fade:hover {
     opacity: 1;
 }
-
+a{
+  text-decoration: none;
+}
 :root {
     /* --width-color-option: 15px;
     --height-color-option: 3px; */
@@ -141,6 +143,7 @@ header.header-fade:hover {
       color: #23235f;
       font-size: 1.15rem;
       margin-bottom: 8px;
+      text-decoration: none;
     }
     .product-colors {
       display: inline-flex;

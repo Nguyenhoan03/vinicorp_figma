@@ -64,7 +64,7 @@ header.header-fade:hover {
 
 
 .featured-products {
-    background: #fff;
+    background: #ffffff;
     padding: 40px 0 60px 0;
 }
 
@@ -99,7 +99,7 @@ header.header-fade:hover {
     margin: 0;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     background-color: #F6F7FB;
-    border-radius: 16px;
+    /* border-radius: 16px; */
     overflow: hidden;
     transition: box-shadow 0.2s;
     display: flex;
@@ -996,6 +996,10 @@ header.header-fade:hover {
     font-size: 12px;
     cursor: pointer;
 }
+.top-categories__btn a {
+    color: white;
+    text-decoration: none;
+}
 
 .top-categories__card:hover::before {
     opacity: 1;
@@ -1027,6 +1031,8 @@ header.header-fade:hover {
 
 .top-categories__price {
     font-size: 16px;
+    color: var(--color-title);
+    font-family: var(--font-family-title);
 }
 
 .img-banner {

@@ -100,71 +100,256 @@
             </div>
         </div>
 
+        <section>
+            <div class="product-card container mt-5 mb-5">
+                <div class="prodct-card__item row g-3 align-items-center">
 
-        <div class="product-detail container mt-5 mb-5">
-            <div class="row g-4 align-items-center">
-                <div class="col-auto">
-                    <div class="thumb-list d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=200&q=80"
-                            class="thumb-img active" alt="thumb1">
-                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80"
-                            class="thumb-img" alt="thumb2">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80"
-                            class="thumb-img" alt="thumb3">
+                    <div class="col-2 d-flex flex-column align-items-end">
+                        <div class="thumb-list d-flex flex-column">
+                            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=200&q=80"
+                                class="thumb-img active" alt="thumb1">
+                            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80"
+                                class="thumb-img" alt="thumb2">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80"
+                                class="thumb-img" alt="thumb3">
+                            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=200&q=80"
+                                class="thumb-img" alt="thumb4">
+                        </div>
                     </div>
-                </div>
-                <div class="col-auto product-detail__main-img">
-                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80"
-                        class="main-img" id="mainProductImg" alt="main">
-                </div>
-                <div class="col">
-                    <div class="product-title">Playwood arm chair</div>
-                    <div class="product-detail__rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <span class="product-detail__rating__count">(22)</span>
+
+                    <div class="col-4 thumb-main__img d-flex justify-content-center">
+                        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80"
+                            class="main-img" id="mainProductImg" alt="main">
                     </div>
-                    <div class="product-detail__price">
-                        $32.00
-                        <span class="old-price">$32.00</span>
-                    </div>
-                    <div class="mb-2">
-                        <span class="meta-label">Color</span>
-                    </div>
-                    <div class="product-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et
-                        volutpat sit.
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn-add">Add To Cart</button>
-                        <button class="btn-fav"><i class="far fa-heart"></i></button>
-                    </div>
-                    <div class="product-meta">
-                        <div><span class="meta-label">Categories:</span></div>
-                        <div><span class="meta-label">Tags</span></div>
-                        <div class="mt-2">
-                            <span class="meta-label">Share</span>
-                            <span class="share-icons">
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-dribbble"></i>
-                            </span>
+
+                    <div class="col-6 thumb-desc">
+                        <div class="product-title">Playwood arm chair</div>
+                        <div class="product-rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="count">(22)</span>
+                        </div>
+                        <div class="product-price mb-2">
+                            $32.00
+                            <span class="old-price">$32.00</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="meta-label" style="font-weight: 600;">Color</span>
+                        </div>
+                        <div class="product-desc mb-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et
+                            volutpat sit.
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn-add">Add To Cart</button>
+                            <button class="btn-fav"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-meta">
+                            <div><span class="meta-label">Categories:</span></div>
+                            <div style="margin-top: 10px;"><span class="meta-label">Tags</span></div>
+                            <div class="mt-2">
+                                <span class="meta-label">Share</span>
+                                <span class="share-icons">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-dribbble"></i>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
 
-        </div>
+        <section class="desc-productdetail mt-5 mb-5 pb-5">
+            <div class="container pt-5">
+                <div class="desc-productdetail__category d-flex">
+                    <p class="active" data-tab="desc">Description</p>
+                    <p data-tab="info">Additional Info</p>
+                    <p data-tab="reviews">Reviews</p>
+                    <p data-tab="video">Video</p>
+                </div>
+
+                <div class="desc-productdetail__content">
+                    <div class="tab-pane active" id="desc">
+                        <div class="desc-productdetail__title pt-4">
+                            <h2>Varius tempor.</h2>
+                            <p>Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed
+                                et
+                                eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac
+                                ante.
+                                Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat
+                                laoreet
+                                diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet
+                                consequat,
+                                quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui,
+                                massa
+                                viverr .</p>
+                        </div>
+                        <div class="desc-productdetail__detail pt-4">
+                            <h2>More details</h2>
+                            <ul class="desc-productdetail__list">
+                                <li>
+                                    <span class="arrow-icon">&#8594;</span>
+                                    Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla
+                                    lobortis
+                                    justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .
+                                </li>
+                                <li>
+                                    <span class="arrow-icon">&#8594;</span>
+                                    Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla
+                                    lobortis
+                                    justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .
+                                </li>
+                                <li>
+                                    <span class="arrow-icon">&#8594;</span>
+                                    Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla
+                                    lobortis
+                                    justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .
+                                </li>
+                                <li>
+                                    <span class="arrow-icon">&#8594;</span>
+                                    Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla
+                                    lobortis
+                                    justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="info">
+                        <div class="desc-productdetail__title">
+                            <h2>Additional Information</h2>
+                            <p>Material: Wood, Color: Brown, Warranty: 2 years, ...</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="reviews">
+                        <div class="desc-productdetail__title">
+                            <h2>Reviews</h2>
+                            <p>No reviews yet. Be the first to review this product!</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="video">
+                        <div class="desc-productdetail__title">
+                            <h2>Product Video</h2>
+                            <p>Watch the product video below:</p>
+                            <iframe width="400" height="225"
+                                src="https://vip.opstream90.com/share/b8c8c63d4b8856c7872b225e53a6656c"
+                                title="Product Video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
+        <section class="relate-product mt-5 mb-5">
+            <div class="container">
+                <h2 class="relate-title mb-4">Related Products</h2>
+                <div class="relate-grid pt-3">
+                    <div class="relate-item">
+                        <a href="">
+                        <img src="./images/Rectangle 102.png"
+                            alt="Mens Fashion Wear" class="relate-img">
+                        <div class="relate-info">
+                            <div class="relate-name d-flex justify-content-between">
+                                <div> Mens Fashion Wear </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
 
-        <!-- Brand logos -->
+                            </div>
+                            <div class="relate-row">
+                                <span class="relate-price">$43.00</span>
+
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="relate-item">
+                        <a href="">
+                        <img src="./images/Rectangle 128.png"
+                            alt="Mens Fashion Wear" class="relate-img">
+                        <div class="relate-info">
+                            <div class="relate-name d-flex justify-content-between">
+                                <div> Mens Fashion Wear </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                            </div>
+                            <div class="relate-row">
+                                <span class="relate-price">$67.00</span>
+
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="relate-item">
+                        <a href="">
+                        <img src="./images/Rectangle 130.png"
+                            alt="Mens Fashion Wear" class="relate-img">
+                        <div class="relate-info">
+                            <div class="relate-name d-flex justify-content-between">
+                                <div> Mens Fashion Wear </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+
+                            </div>
+                            <div class="relate-row">
+                                <span class="relate-price">$67.00</span>
+
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="relate-item">
+                        <a href="">
+                        <img src="./images/Rectangle 131.png"
+                            alt="Mens Fashion Wear" class="relate-img">
+                        <div class="relate-info">
+                            <div class="relate-name d-flex justify-content-between">
+                                <div> Mens Fashion Wear </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star" ></i>
+                                </div>
+
+                            </div>
+                            <div class="relate-row">
+                                <span class="relate-price">$51.00</span>
+
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
         <div class="container mt-5">
-            <section class="fade-right reveal brand mt-5 mb-5">
+            <section class="fade-right reveal brand mt-5 mb-5 pt-3 pb-5 margin-auto">
                 <div class="brand-logos d-flex justify-content-between align-items-center my-5">
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153723.png" alt="Brand 1"
                             class="brand-logo" /></a>
@@ -179,8 +364,8 @@
                 </div>
             </section>
         </div>
-    </main>
 
+    </main>
 
 
     <footer class="bg-light text-secondary mt-5">
@@ -278,6 +463,29 @@
         } else {
             header.classList.remove('header-fade');
         }
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.thumb-img').forEach(function (img) {
+        img.addEventListener('click', function () {
+            document.querySelectorAll('.thumb-img').forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById('mainProductImg').src = this.src.replace('w=200', 'w=600');
+        });
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.desc-productdetail__category p').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+
+            document.querySelectorAll('.desc-productdetail__category p').forEach(p => p.classList.remove('active'));
+            this.classList.add('active');
+
+            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+            document.getElementById(this.getAttribute('data-tab')).classList.add('active');
+        });
     });
 </script>
 
