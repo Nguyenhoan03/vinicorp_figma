@@ -143,3 +143,168 @@ body {
 .dropdown-toggle::after {
     display: none !important;
 }
+
+
+
+@media (max-width: 992px) {
+    /* Top-bar responsive */
+ .top-bar-content {
+        flex-direction: column;
+        gap: 8px !important;
+        text-align: center;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+        justify-content: center !important;
+        flex-wrap: wrap;
+        gap: 10px !important;
+    }
+
+    .top-bar-right>* {
+        font-size: 15px;
+    }
+
+
+    /* Offcanvas menu tab cho mobile */
+    .main-nav {
+        display: none !important;
+    }
+    .mobile__header {
+        display: block!important;
+    }
+
+    .offcanvas {
+        width: 240px;
+    }
+
+    .offcanvas .nav-link {
+        font-size: 1.1rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    #dropdownHome {
+        padding-left: 12px;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+        padding: 5px;
+        padding-left: 12px;
+    }
+    .offcanvas-body a:hover{
+        background-color:#FB2E86;
+    }
+
+
+    /* Nav-bar responsive */
+
+    .nav-bar-content {
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .logo {
+        font-size: 2rem;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .main-nav {
+        padding: 16px 0 8px 0;
+        background: #fff;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .main-nav a,
+    .main-nav .dropdown {
+        font-size: 18px;
+        padding: 8px 0;
+        display: block;
+        width: 100%;
+    }
+
+    .main-nav .dropdown-menu {
+        position: static !important;
+        float: none;
+        box-shadow: none;
+        background: #f8f8f8;
+        margin-bottom: 8px;
+    }
+
+    .search-box {
+        margin: 12px 0 0 0;
+        width: 100%;
+    }
+}
+
+
+
+/* Mobile: tối ưu hơn cho màn nhỏ */
+@media (max-width: 575.98px) {
+    .logo {
+        font-size: 1.5rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .main-nav {
+        padding: 10px 0;
+    }
+
+    .search-box input {
+        font-size: 15px;
+    }
+}
+
+/* Ẩn top-bar trên mobile, chỉ hiện trên md trở lên */
+@media (max-width: 767px) {
+    .top-bar {
+        display: none !important;
+    }
+
+    .nav-bar .logo {
+        flex: 1 1 auto;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .main-nav.collapse {
+        position: absolute;
+        top: 56px;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        z-index: 1000;
+        padding: 1rem 0;
+    }
+}
+
+.top-bar-mobile {
+    background: #a259d9;
+    color: #fff;
+    font-size: 15px;
+    border-bottom: 1px solid #fff2;
+}
+.top-bar-mobile span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+@media (min-width: 768px) {
+    .top-bar-mobile {
+        display: none !important;
+    }
+}
