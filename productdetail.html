@@ -19,7 +19,7 @@
 
 
 <body>
-     <header class="position-fixed top-0 start-0 w-100 z-3">
+    <header class="position-fixed top-0 start-0 w-100 z-3">
         <!-- Top bar desktop/tablet -->
         <div class="top-bar d-none d-lg-block">
             <div class="container">
@@ -65,7 +65,8 @@
             style="background:#a259d9;color:#fff;font-size:15px;">
             <span><i class="fa-regular fa-envelope"></i> nmh@gmail.com </span>
             <span><i class="fa-solid fa-phone"></i> (12345)67890</span>
-            <span class="dropdown dropdown-toggle" id="dropdownLanguage" data-bs-toggle="dropdown"> English <i class="fa-solid fa-chevron-down"></i>
+            <span class="dropdown dropdown-toggle" id="dropdownLanguage" data-bs-toggle="dropdown"> English <i
+                    class="fa-solid fa-chevron-down"></i>
                 <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
                     <li><a class="dropdown-item" href="#">Vietnamese</a></li>
                     <li><a class="dropdown-item" href="#">Japan</a></li>
@@ -103,7 +104,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div> -->
-                    <div class="col-12 col-lg-7 d-none d-md-block">
+                    <div class="col-12 col-lg-7 d-none d-md-block d-flex">
                         <nav class="main-nav collapse d-lg-flex align-items-center gap-4" id="mainNavCollapse">
                             <div class="dropdown">
                                 <a href="#" class="active dropdown-toggle" id="dropdownHome" data-bs-toggle="dropdown"
@@ -171,62 +172,64 @@
                 </ul>
             </div>
         </div>
-
         <section>
             <div class="product-card container mt-5 mb-5">
-                <div class="prodct-card__item row g-3 align-items-center">
-
-                    <div class="col-2 d-flex flex-column align-items-end">
-                        <div class="thumb-list d-flex flex-column">
+                <div class="row g-4 align-items-start flex-wrap">
+                    <!-- Thumbnail List -->
+                    <div class="col-lg-2 col-md-3 col-12 order-2 order-md-1">
+                        <div class="thumb-list d-flex d-sm-block justify-content-center gap-2 gap-sm-0">
                             <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=200&q=80"
-                                class="thumb-img active" alt="thumb1">
+                                class="thumb-img active img-fluid mb-2" alt="thumb1">
                             <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80"
-                                class="thumb-img" alt="thumb2">
+                                class="thumb-img img-fluid mb-2" alt="thumb2">
                             <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80"
-                                class="thumb-img" alt="thumb3">
+                                class="thumb-img img-fluid mb-2" alt="thumb3">
                             <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=200&q=80"
-                                class="thumb-img" alt="thumb4">
+                                class="thumb-img img-fluid mb-2" alt="thumb4">
                         </div>
                     </div>
 
-                    <div class="col-4 thumb-main__img d-flex justify-content-center">
+                    <!-- Main Image -->
+                    <div class="col-12 col-md-6 order-1 order-md-2 text-center main-imgs">
                         <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80"
-                            class="main-img" id="mainProductImg" alt="main">
+                            class="main-img img-fluid" id="mainProductImg" alt="main">
                     </div>
 
-                    <div class="col-6 thumb-desc">
-                        <div class="product-title">Playwood arm chair</div>
+                    <!-- Description -->
+                    <div class="col-12 product__description fade-in-up col-md-4 order-3">
+                        <div class="product-title h4 fw-bold">Playwood arm chair</div>
                         <div class="product-rating mb-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="count">(22)</span>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="count text-muted">(22)</span>
                         </div>
                         <div class="product-price mb-2">
-                            $32.00
-                            <span class="old-price">$32.00</span>
+                            <span class="fw-bold text-primary fs-5">$32.00</span>
+                            <span class="old-price text-danger text-decoration-line-through ms-2">$32.00</span>
                         </div>
                         <div class="mb-2">
-                            <span class="meta-label" style="font-weight: 600;">Color</span>
+                            <span class="meta-label fw-semibold">Color</span>
                         </div>
-                        <div class="product-desc mb-3">
+                        <div class="product-desc mb-3 text-muted">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et
                             volutpat sit.
                         </div>
-                        <div class="mb-3">
-                            <button class="btn-add">Add To Cart</button>
-                            <button class="btn-fav"><i class="far fa-heart"></i></button>
+                        <div class="mb-3 d-flex align-items-center gap-2">
+                            <button class="btn btn-primary px-4">Add To Cart</button>
+                            <button class="btn btn-outline-secondary rounded-circle"><i
+                                    class="far fa-heart"></i></button>
                         </div>
-                        <div class="product-meta">
-                            <div><span class="meta-label">Categories:</span></div>
-                            <div style="margin-top: 10px;"><span class="meta-label">Tags</span></div>
-                            <div class="mt-2">
-                                <span class="meta-label">Share</span>
-                                <span class="share-icons">
-                                    <i class="fab fa-facebook-f"></i>
-                                    <i class="fab fa-twitter"></i>
+                        <div class="product-meta text-muted">
+                            <div><span class="meta-label fw-bold">Categories:</span></div>
+                            <div class="mt-2"><span class="meta-label fw-bold">Tags</span></div>
+                            <div class="mt-3">
+                                <span class="meta-label fw-bold">Share</span>
+                                <span class="share-icons ms-2">
+                                    <i class="fab fa-facebook-f me-2"></i>
+                                    <i class="fab fa-twitter me-2"></i>
                                     <i class="fab fa-dribbble"></i>
                                 </span>
                             </div>
@@ -237,7 +240,8 @@
         </section>
 
 
-        <section class="desc-productdetail mt-5 mb-5 pb-5 fade-in-up" >
+
+        <section class="desc-productdetail mt-5 mb-5 pb-5 fade-in-up">
             <div class="container pt-5">
                 <div class="desc-productdetail__category d-flex">
                     <p class="active" data-tab="desc">Description</p>
@@ -324,94 +328,90 @@
                 <div class="relate-grid pt-3">
                     <div class="relate-item">
                         <a href="">
-                        <img src="./images/Rectangle 102.png"
-                            alt="Mens Fashion Wear" class="relate-img">
-                        <div class="relate-info">
-                            <div class="relate-name d-flex justify-content-between">
-                                <div> Mens Fashion Wear </div>
-                                <div class="product-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                    <i class="far fa-star"></i>
+                            <img src="./images/Rectangle 128.png" alt="Mens Fashion Wear" class="relate-img">
+                            <div class="relate-info">
+                                <div class="relate-name d-flex justify-content-between">
+                                    <div> Mens Fashion Wear </div>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
                                 </div>
+                                <div class="relate-row">
+                                    <span class="relate-price">$67.00</span>
 
+                                </div>
                             </div>
-                            <div class="relate-row">
-                                <span class="relate-price">$43.00</span>
-
-                            </div>
-                        </div>
                         </a>
                     </div>
                     <div class="relate-item">
                         <a href="">
-                        <img src="./images/Rectangle 128.png"
-                            alt="Mens Fashion Wear" class="relate-img">
-                        <div class="relate-info">
-                            <div class="relate-name d-flex justify-content-between">
-                                <div> Mens Fashion Wear </div>
-                                <div class="product-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
+                            <img src="./images/Rectangle 128.png" alt="Mens Fashion Wear" class="relate-img">
+                            <div class="relate-info">
+                                <div class="relate-name d-flex justify-content-between">
+                                    <div> Mens Fashion Wear </div>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
                                 </div>
+                                <div class="relate-row">
+                                    <span class="relate-price">$67.00</span>
 
+                                </div>
                             </div>
-                            <div class="relate-row">
-                                <span class="relate-price">$67.00</span>
-
-                            </div>
-                        </div>
                         </a>
                     </div>
                     <div class="relate-item">
                         <a href="">
-                        <img src="./images/Rectangle 130.png"
-                            alt="Mens Fashion Wear" class="relate-img">
-                        <div class="relate-info">
-                            <div class="relate-name d-flex justify-content-between">
-                                <div> Mens Fashion Wear </div>
-                                <div class="product-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                            <img src="./images/Rectangle 130.png" alt="Mens Fashion Wear" class="relate-img">
+                            <div class="relate-info">
+                                <div class="relate-name d-flex justify-content-between">
+                                    <div> Mens Fashion Wear </div>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+
                                 </div>
+                                <div class="relate-row">
+                                    <span class="relate-price">$67.00</span>
 
+                                </div>
                             </div>
-                            <div class="relate-row">
-                                <span class="relate-price">$67.00</span>
-
-                            </div>
-                        </div>
                         </a>
                     </div>
                     <div class="relate-item">
                         <a href="">
-                        <img src="./images/Rectangle 131.png"
-                            alt="Mens Fashion Wear" class="relate-img">
-                        <div class="relate-info">
-                            <div class="relate-name d-flex justify-content-between">
-                                <div> Mens Fashion Wear </div>
-                                <div class="product-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star" ></i>
+                            <img src="./images/Rectangle 131.png" alt="Mens Fashion Wear" class="relate-img">
+                            <div class="relate-info">
+                                <div class="relate-name d-flex justify-content-between">
+                                    <div> Mens Fashion Wear </div>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
                                 </div>
+                                <div class="relate-row">
+                                    <span class="relate-price">$51.00</span>
 
+                                </div>
                             </div>
-                            <div class="relate-row">
-                                <span class="relate-price">$51.00</span>
-
-                            </div>
-                        </div>
                         </a>
                     </div>
 
@@ -424,15 +424,15 @@
             <section class="fade-right reveal brand mt-5 mb-5 pt-3 pb-5 margin-auto">
                 <div class="brand-logos d-flex align-items-center my-5">
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153723.png" alt="Brand 1"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153816.png" alt="Brand 2"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153833.png" alt="Brand 3"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153852.png" alt="Brand 4"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153911.png" alt="Brand 5"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                 </div>
             </section>
         </div>
@@ -564,7 +564,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        document.querySelectorAll('.fade-in-up').forEach(function(section) {
+        document.querySelectorAll('.fade-in-up').forEach(function (section) {
             const observer = new IntersectionObserver(
                 function (entries, observer) {
                     entries.forEach(entry => {
@@ -580,4 +580,5 @@
         });
     });
 </script>
+
 </html>

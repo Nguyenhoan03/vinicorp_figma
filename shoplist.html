@@ -19,7 +19,7 @@
 
 
 <body>
-      <header class="position-fixed top-0 start-0 w-100 z-3">
+    <header class="position-fixed top-0 start-0 w-100 z-3">
         <!-- Top bar desktop/tablet -->
         <div class="top-bar d-none d-lg-block">
             <div class="container">
@@ -65,7 +65,8 @@
             style="background:#a259d9;color:#fff;font-size:15px;">
             <span><i class="fa-regular fa-envelope"></i> nmh@gmail.com </span>
             <span><i class="fa-solid fa-phone"></i> (12345)67890</span>
-            <span class="dropdown dropdown-toggle" id="dropdownLanguage" data-bs-toggle="dropdown"> English <i class="fa-solid fa-chevron-down"></i>
+            <span class="dropdown dropdown-toggle" id="dropdownLanguage" data-bs-toggle="dropdown"> English <i
+                    class="fa-solid fa-chevron-down"></i>
                 <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
                     <li><a class="dropdown-item" href="#">Vietnamese</a></li>
                     <li><a class="dropdown-item" href="#">Japan</a></li>
@@ -173,27 +174,31 @@
         </div>
 
         <div class="container mt-5 mb-5">
-            <div class="d-flex justify-content-between gap-3">
-                <div class="">
+            <div class="d-flex shoplist__filter row justify-content-between reveal">
+                <div class="col-12 col-lg-4 ">
                     <div class="header-title">Ecommerce Accesories & Fashion item</div>
                     <div class="header-sub">About 9,620 results (0.62 seconds)</div>
                 </div>
-                <div class="filters">
-                    <label>Per Page:</label>
-                    <input type="text" style="width:50px;padding-left: 10px;">
-                    <label class="mx-2">Sort By:</label>
-                    <select>
-                        <option>Best Match</option>
-                        <option>Price Low</option>
-                        <option>Price High</option>
-                    </select>
-                    <label>View:</label>
-                    <span class="view-icons"><i class="fas fa-th-large"></i> <i class="fas fa-th-list"></i></span>
-                    <input class="search-box" type="text" style="width:170px;padding-left: 10px;">
+                <div class="filters col-12 col-lg-7">
+                    <div class="filters-row d-flex flex-wrap align-items-center gap-2">
+                        <label>Per Page:</label>
+                        <input type="text" style="width:50px;padding-left: 10px;">
+                        <label class="mx-2">Sort By:</label>
+                        <select>
+                            <option>Best Match</option>
+                            <option>Price Low</option>
+                            <option>Price High</option>
+                        </select>
+                    </div>
+                    <div class="filters-viewsearch d-flex align-items-center gap-2 mt-2">
+                        <label>View:</label>
+                        <span class="view-icons"><i class="fas fa-th-large"></i> <i class="fas fa-th-list"></i></span>
+                        <input class="search-box" type="text" style="width:170px;padding-left: 10px;">
+                    </div>
                 </div>
             </div>
-            <div class="">
-                <div class="product-card mt-5 p-2">
+            <div class="product-cards">
+                <div class="product-card mt-5 p-2 reveal">
                     <img class="product-image"
                         src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
                         alt="Product">
@@ -232,7 +237,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card mt-5 p-2">
+
+
+                <div class="product-card mt-5 p-2 reveal">
                     <img class="product-image"
                         src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
                         alt="Product">
@@ -271,13 +278,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card mt-5 p-2">
+                <div class="product-card mt-5 p-2 reveal">
                     <img class="product-image"
                         src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
                         alt="Product">
                     <div class="product-info">
                         <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> Vel sem </a></span>
+                            <span class="product-title"><a href=""> In nulla </a></span>
                             <span class="product-colors">
                                 <span class="color-dot color1"></span>
                                 <span class="color-dot color2"></span>
@@ -310,13 +317,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card mt-5 p-2">
+                <div class="product-card mt-5 p-2 reveal">
                     <img class="product-image"
                         src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
                         alt="Product">
                     <div class="product-info">
                         <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> Accumsan tincidunt </a></span>
+                            <span class="product-title"><a href=""> In nulla </a></span>
                             <span class="product-colors">
                                 <span class="color-dot color1"></span>
                                 <span class="color-dot color2"></span>
@@ -349,13 +356,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card mt-5 p-2">
+                <div class="product-card mt-5 p-2 reveal">
                     <img class="product-image"
                         src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
                         alt="Product">
                     <div class="product-info">
                         <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> Accumsan tincidunt </a></span>
+                            <span class="product-title"><a href=""> In nulla </a></span>
                             <span class="product-colors">
                                 <span class="color-dot color1"></span>
                                 <span class="color-dot color2"></span>
@@ -388,23 +395,63 @@
                         </div>
                     </div>
                 </div>
+                <div class="product-card mt-5 p-2 reveal">
+                    <img class="product-image"
+                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
+                        alt="Product">
+                    <div class="product-info">
+                        <div class="product-info__title d-flex justify-content-between">
+                            <span class="product-title"><a href=""> In nulla </a></span>
+                            <span class="product-colors">
+                                <span class="color-dot color1"></span>
+                                <span class="color-dot color2"></span>
+                                <span class="color-dot color3"></span>
+                            </span>
+                        </div>
+                        <div class="d-flex">
+                            <div class="product-price">
+                                $26.00
+                                <span class="old-price">$52.00</span>
+                                <span class="discount"> </span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-desc pt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
+                            phasellus
+                            non in justo.
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <!-- Brand logos -->
-        <div class="container mt-5">
-            <section class="fade-right reveal brand mt-5 mb-5">
+        <div class="container mt-5 reveal">
+            <section class="fade-right reveal brand mt-5 mb-5 ">
                 <div class="brand-logos d-flex justify-content-between align-items-center my-5">
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153723.png" alt="Brand 1"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153816.png" alt="Brand 2"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153833.png" alt="Brand 3"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153852.png" alt="Brand 4"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153911.png" alt="Brand 5"
-                            class="brand-logo" /></a>
+                            class="brand-logo img-fluid" /></a>
                 </div>
             </section>
         </div>
@@ -510,4 +557,18 @@
     });
 </script>
 
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Nếu chỉ muốn hiệu ứng 1 lần, bỏ comment dòng dưới:
+        // observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(reveal => observer.observe(reveal));
+</script>
 </html>
