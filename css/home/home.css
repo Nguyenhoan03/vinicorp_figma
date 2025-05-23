@@ -6,7 +6,7 @@
     --font-family-title: "Josefin Sans";
     --font-size-title: 42px;
 
-
+    --width-responsive: 100vw;
 }
 
 
@@ -73,7 +73,7 @@ header.header-fade:hover {
 }
 
 .swiper {
-    width: 100vw;
+    width: var(--width-responsive);
     max-width: 1600px;
     margin: 0 auto;
     padding-bottom: 40px;
@@ -1313,3 +1313,32 @@ header.header-fade:hover {
 }
 
 
+
+
+@media screen and (max-width:776px) {
+
+    .leatest-blog__item {
+        width: 100%;
+    }
+
+    .discount-item__img-wrapper {
+        display: none;
+    }
+    .top-bar-mobile span.span_phonenumber {
+        display: none;
+    }
+
+    ul.image_adv__features li {
+        width: var(--width-responsive);
+    }
+
+    h2.img-banner__title {
+        width: var(--width-responsive);
+    }
+
+    .image_adv__content, .image_adv__title, .image_adv__features, .image_adv__actions {
+        width: var(--width-responsive);
+    
+    }
+
+}

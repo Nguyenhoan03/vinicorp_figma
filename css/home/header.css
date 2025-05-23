@@ -11,10 +11,10 @@
     --primary-color: #000000;
     --secondary-color: #ffffff;
     --text-color: #333333;
-    
+
     /* Typography */
     --font-family: Arial, sans-serif;
-    
+
     /* Spacing */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
@@ -31,26 +31,36 @@ body {
 }
 
 /* Utility classes */
-.container {
+/* .container {
     max-width: 1150px !important;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
-}
+} */
 
 /* Add more styles based on your Figma design */
 
 /* Header Styles */
+header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  
+}
 .top-bar {
     background: #8349db;
     color: #fff;
     font-size: 15px;
     padding: 8px 0;
 }
+
 .top-bar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .top-bar-left span,
 .top-bar-right span {
     margin-right: 24px;
@@ -58,9 +68,11 @@ body {
     align-items: center;
     gap: 6px;
 }
+
 .top-bar-right span:last-child {
     margin-right: 0;
 }
+
 .top-bar-right {
     display: flex;
     align-items: center;
@@ -71,12 +83,14 @@ body {
     box-shadow: 0 2px 8px rgba(131, 73, 219, 0.04);
     padding: 0;
 }
+
 .nav-bar-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 18px 0;
 }
+
 .logo {
     font-size: 2.2rem;
     font-weight: bold;
@@ -85,11 +99,13 @@ body {
     margin-right: 40px;
     font-family: 'Arial Black', Arial, sans-serif;
 }
+
 .main-nav {
     display: flex;
     align-items: center;
     gap: 28px;
 }
+
 .main-nav a {
     color: #222;
     text-decoration: none;
@@ -98,10 +114,12 @@ body {
     transition: color 0.2s;
     position: relative;
 }
+
 .main-nav a.active,
 .main-nav a:hover {
     color: #fb2e86;
 }
+
 .main-nav a.active::after {
     content: '';
     display: block;
@@ -111,11 +129,13 @@ body {
     margin: 4px auto 0 auto;
     border-radius: 2px;
 }
+
 .search-box {
     display: flex;
     align-items: center;
     margin-left: 32px;
 }
+
 .search-box input[type="text"] {
     padding: 8px 12px;
     border: 2px solid #eee;
@@ -124,9 +144,11 @@ body {
     width: 220px;
     transition: border 0.2s;
 }
+
 .search-box input[type="text"]:focus {
     border-color: #8349db;
 }
+
 .search-box button {
     background: #fb2e86;
     border: none;
@@ -137,21 +159,30 @@ body {
     margin-left: -2px;
     transition: background 0.2s;
 }
+
 .search-box button:hover {
     background: #d81b60;
-} 
+}
+
 .dropdown-toggle::after {
     display: none !important;
 }
 
-
-
 @media (max-width: 992px) {
-    header{
+       
+    header {
         width: 100vw;
     }
+
+    .nav-bar {
+        width: 100vw;
+    }
+    .top-bar-mobile {
+        width: 100vw;
+    }
+
     /* Top-bar responsive */
- .top-bar-content {
+    .top-bar-content {
         flex-direction: column;
         gap: 8px !important;
         text-align: center;
@@ -168,38 +199,7 @@ body {
         font-size: 15px;
     }
 
-
-    /* Offcanvas menu tab cho mobile */
-    .main-nav {
-        display: none !important;
-    }
-    .mobile__header {
-        display: block!important;
-    }
-
-    .offcanvas {
-        width: 240px;
-    }
-
-    .offcanvas .nav-link {
-        font-size: 1.1rem;
-        border-bottom: 1px solid #eee;
-    }
-
-    #dropdownHome {
-        padding-left: 12px;
-        border-bottom: 1px solid #eee;
-        text-decoration: none;
-        padding: 5px;
-        padding-left: 12px;
-    }
-    .offcanvas-body a:hover{
-        background-color:#FB2E86;
-    }
-
-
     /* Nav-bar responsive */
-
     .nav-bar-content {
         flex-wrap: wrap;
         row-gap: 12px;
@@ -209,60 +209,6 @@ body {
         font-size: 2rem;
         text-align: left;
         padding-left: 10px;
-    }
-
-    .main-nav {
-        padding: 16px 0 8px 0;
-        background: #fff;
-        border-radius: 0 0 12px 12px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-    }
-
-    .main-nav a,
-    .main-nav .dropdown {
-        font-size: 18px;
-        padding: 8px 0;
-        display: block;
-        width: 100%;
-    }
-
-    .main-nav .dropdown-menu {
-        position: static !important;
-        float: none;
-        box-shadow: none;
-        background: #f8f8f8;
-        margin-bottom: 8px;
-    }
-
-    .search-box {
-        margin: 12px 0 0 0;
-        width: 100%;
-    }
-}
-
-
-
-/* Mobile: tối ưu hơn cho màn nhỏ */
-@media (max-width: 575.98px) {
-    .logo {
-        font-size: 1.5rem;
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .main-nav {
-        padding: 10px 0;
-    }
-
-    .search-box input {
-        font-size: 15px;
-    }
-}
-
-/* Ẩn top-bar trên mobile, chỉ hiện trên md trở lên */
-@media (max-width: 767px) {
-    .top-bar {
-        display: none !important;
     }
 
     .nav-bar .logo {
@@ -293,6 +239,64 @@ body {
         z-index: 1000;
         padding: 1rem 0;
     }
+
+    .main-nav {
+        display: none !important;
+    }
+
+    .offcanvas {
+        width: 240px;
+    }
+
+    .offcanvas .nav-link {
+        font-size: 1.1rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    #dropdownHome {
+        padding-left: 12px;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+        padding: 5px;
+        padding-left: 12px;
+    }
+
+    .offcanvas-body a:hover {
+        background-color: #FB2E86;
+    }
+
+    .search-box {
+        margin: 12px 0 0 0;
+        width: 100%;
+    }
+}
+
+/* Mobile: tối ưu hơn cho màn nhỏ */
+@media (max-width: 575px) {
+    .logo {
+        font-size: 1.5rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .main-nav {
+        padding: 10px 0;
+    }
+
+    .search-box input {
+        font-size: 15px;
+    }
+    header{
+        width: 100vw!important;
+        background-color: red;
+    }
+   
+}
+@media screen and (max-width: 497px) {
+     .top-bar-mobile {
+        display: none;
+     }
+    
 }
 
 .top-bar-mobile {
@@ -301,13 +305,17 @@ body {
     font-size: 15px;
     border-bottom: 1px solid #fff2;
 }
+
 .top-bar-mobile span {
     display: flex;
     align-items: center;
     gap: 4px;
 }
+
+/*
 @media (min-width: 768px) {
     .top-bar-mobile {
         display: none !important;
     }
 }
+*/
