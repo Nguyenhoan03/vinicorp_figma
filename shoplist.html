@@ -19,7 +19,7 @@
 
 
 <body>
-    <header class="position-fixed top-0 start-0 w-100 z-3">
+    <header>
         <!-- Top bar desktop/tablet -->
         <div class="top-bar d-none d-lg-block">
             <div class="container">
@@ -79,7 +79,7 @@
         <!-- Nav bar -->
         <div class="nav-bar">
             <div class="container">
-                <div class="row align-items-center nav-bar-content d-flex">
+                <div class="row mobile_setting align-items-center nav-bar-content d-flex">
                     <!-- Mobile header -->
                     <div class="d-flex mobile__header d-lg-none justify-content-between align-items-center py-2">
                         <!-- Hamburger left: mở offcanvas menu -->
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <!-- Desktop/tablet header -->
-                    <div class="col-6 col-lg-1 logo d-none d-lg-block">Hekto</div>
+                    <div class="col-6 col-lg-1 logo logo_desktop d-none d-lg-block">Hekto</div>
                     <!-- <div class="col-6 d-lg-none text-end d-none d-md-block">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#mainNavCollapse" aria-controls="mainNavCollapse" aria-expanded="false"
@@ -104,7 +104,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div> -->
-                    <div class="col-12 col-lg-7 d-none d-md-block d-flex">
+                    <div class="col-12 col-lg-7 d-none d-md-block">
                         <nav class="main-nav collapse d-lg-flex align-items-center gap-4" id="mainNavCollapse">
                             <div class="dropdown">
                                 <a href="#" class="active dropdown-toggle" id="dropdownHome" data-bs-toggle="dropdown"
@@ -124,7 +124,7 @@
                             <a href="#">Contact</a>
                         </nav>
                     </div>
-                    <div class="col-12 col-lg-3 d-none d-lg-flex justify-content-lg-end mt-3 mt-lg-0">
+                    <div class="col-12 col-lg-3 search-box__icon d-none d-lg-flex justify-content-lg-end mt-3 mt-lg-0">
                         <form class="search-box d-flex w-100">
                             <input type="text" class="form-control" placeholder="Search...">
                             <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -134,10 +134,12 @@
             </div>
         </div>
         <!-- Offcanvas menu tab cho mobile -->
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasMenu"
+            aria-labelledby="offcanvasMenuLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <nav class="nav flex-column gap-2">
@@ -158,8 +160,8 @@
                 </nav>
             </div>
         </div>
-    </header>
 
+    </header>
 
     <main>
         <div class="banner-shoplist">
@@ -190,7 +192,7 @@
                             <option>Price High</option>
                         </select>
                     </div>
-                    <div class="filters-viewsearch d-flex align-items-center gap-2 mt-2">
+                    <div class="filters-viewsearch d-flex align-items-center gap-2">
                         <label>View:</label>
                         <span class="view-icons"><i class="fas fa-th-large"></i> <i class="fas fa-th-list"></i></span>
                         <input class="search-box" type="text" style="width:170px;padding-left: 10px;">
@@ -558,17 +560,18 @@
 </script>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        // Nếu chỉ muốn hiệu ứng 1 lần, bỏ comment dòng dưới:
-        // observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Nếu chỉ muốn hiệu ứng 1 lần, bỏ comment dòng dưới:
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
 
-  reveals.forEach(reveal => observer.observe(reveal));
+    reveals.forEach(reveal => observer.observe(reveal));
 </script>
+
 </html>
