@@ -5,17 +5,13 @@
     box-sizing: border-box;
 }
 
-/* CSS Variables */
 :root {
-    /* Colors - Update these based on your Figma design */
     --primary-color: #000000;
     --secondary-color: #ffffff;
     --text-color: #333333;
 
-    /* Typography */
     --font-family: Arial, sans-serif;
 
-    /* Spacing */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
@@ -23,7 +19,6 @@
     --spacing-xl: 32px;
 }
 
-/* Base styles */
 body {
     font-family: var(--font-family);
     line-height: 1.6;
@@ -31,14 +26,7 @@ body {
 }
 
 
-/* Utility classes */
-/* .container {
-    max-width: 1150px !important;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-} */
 
-/* Add more styles based on your Figma design */
 
 /* Header Styles */
 header {
@@ -48,6 +36,13 @@ header {
     left: 0;
     z-index: 10;
 
+}
+.offcanvas.offcanvas-start {
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), opacity 0.4s cubic-bezier(.4,0,.2,1);
+  opacity: 0;
+}
+.offcanvas.offcanvas-start.show {
+  opacity: 1;
 }
 
 .top-bar {
@@ -256,33 +251,28 @@ header {
         color: black;
     }
 
-    /* Tối ưu hiển thị nav-link */
     .offcanvas .nav-link {
         font-size: 1.1rem;
         border-bottom: 1px solid #eee;
     }
 
-    /* Dropdown link cụ thể */
     #dropdownHome {
         padding: 5px 0 5px 12px;
         border-bottom: 1px solid #eee;
         text-decoration: none;
     }
 
-    /* Hover effect */
     .offcanvas-body a:hover {
         background-color: #FB2E86;
         color: white;
     }
 
-    /* Search box trong offcanvas */
     .search-box {
         margin: 12px 0 0 0;
         width: 100%;
     }
 }
 
-/* Mobile: tối ưu hơn cho màn nhỏ */
 @media (max-width: 575px) {
     .logo {
         font-size: 1.5rem;
@@ -325,13 +315,7 @@ header {
     gap: 4px;
 }
 
-/*
-@media (min-width: 768px) {
-    .top-bar-mobile {
-        display: none !important;
-    }
-}
-*/
+
 @media screen and (max-width: 365px) {
 
     html,
@@ -353,5 +337,4 @@ header {
     .banner-shoplist{
         margin-top: -10px;
     }
-
 }

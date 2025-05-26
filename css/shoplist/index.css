@@ -24,54 +24,14 @@ header.header-fade:hover {
 
 
 :root {
-  /* --width-color-option: 15px;
-    --height-color-option: 3px; */
+
 
   --color-title: #101750;
   --font-family-title: "Josefin Sans";
-  /* --font-size-title: 42px; */
-
 
 }
 
-.banner-shoplist {
-  background-color: #F6F5FF;
-  width: 100%;
-  height: 196px;
-}
 
-.banner-shoplist__content {
-  align-items: center;
-}
-
-.breadcrumb-link {
-  color: red;
-}
-
-.banner-shoplist .banner-shoplist__title {
-  font-family: var(--font-family-title);
-  font-size: 36px;
-  color: var(--color-title);
-  text-align: start;
-  padding-top: 50px;
-
-  font-weight: 700;
-}
-
-.banner-shoplist__content ul {
-  margin-left: 0;
-  padding-left: 0;
-  margin-top: -18px;
-}
-
-.banner-shoplist__content ul li {
-  list-style-type: none;
-}
-
-.banner-shoplist__content ul li a {
-  text-decoration: none;
-
-}
 
 
 
@@ -395,7 +355,6 @@ header.header-fade:hover {
   }
 }
 
-/* Responsive fix for filters between 1095px and 1200px */
 @media (max-width: 1200px) and (min-width: 1095px) {
   .shoplist__filter .filters {
     width: 100%;

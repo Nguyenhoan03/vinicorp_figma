@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figma to HTML</title>
-    <link rel="stylesheet" href="css/shoplist/index.css">
+    <link rel="stylesheet" href="css/faq/faq.css">
     <link rel="stylesheet" href="css/home/header.css">
+    <link rel="stylesheet" href="css/banner_shoplist/banner_shoplist.css">
     <!-- <link rel="stylesheet" href="css/home/banner.css"> -->
     <link rel="stylesheet" href="css/home/footer.css">
-    <link rel="stylesheet" href="css/banner_shoplist/banner_shoplist.css">
-
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -165,287 +164,71 @@
 
     </header>
 
+
     <main>
         <div class="banner-shoplist">
             <div class="banner-shoplist__content container align-items-center">
-                <p class="banner-shoplist__title">Shop List</p>
+                <p class="banner-shoplist__title">FAQ</p>
                 <ul class="d-flex gap-2 text-align-start">
                     <li><a href="/">Home</a></li>
                     <li><a href="#">Page</a></li>
-                    <li><a href="/shoplist.html" class="breadcrumb-link">Shop List</a></li>
+                    <li><a href="/shoplist.html" class="breadcrumb-link">Faq</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="container mt-5 mb-5">
-            <div class="d-flex shoplist__filter row justify-content-between reveal">
-                <div class="col-12 col-lg-4 ">
-                    <div class="header-title">Ecommerce Accesories & Fashion item</div>
-                    <div class="header-sub">About 9,620 results (0.62 seconds)</div>
-                </div>
-                <div class="filters col-12 col-lg-7">
-                    <div class="filters-row d-flex flex-wrap align-items-center gap-2">
-                        <label>Per Page:</label>
-                        <input type="text" style="width:50px;padding-left: 10px;">
-                        <label class="mx-2">Sort By:</label>
-                        <select>
-                            <option>Best Match</option>
-                            <option>Price Low</option>
-                            <option>Price High</option>
-                        </select>
+        <section>
+            <div class="information container py-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="faq-title mb-4">Generel Information</h2>
+                        <div class="information_child mb-4">
+                            <p class="faq-question mb-1">Eu dictumst cum at sed euismod condimentum?</p>
+                            <span class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
+                                sed tristique mollis vitae, consequat gravida sagittis.</span>
+                        </div>
+                        <div class="information_child mb-4">
+                            <p class="faq-question mb-1">Magna bibendum est fermentum eros.</p>
+                            <span class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
+                                sed tristique mollis vitae, consequat gravida sagittis.</span>
+                        </div>
+                        <div class="information_child mb-4">
+                            <p class="faq-question mb-1">Odio muskana hak eris conseekin sceleton?</p>
+                            <span class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
+                                sed tristique mollis vitae, consequat gravida sagittis.</span>
+                        </div>
+                        <div class="information_child mb-4">
+                            <p class="faq-question mb-1">Elit id blandit sabara bai velit gua mara?</p>
+                            <span class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
+                                sed tristique mollis vitae, consequat gravida sagittis.</span>
+                        </div>
                     </div>
-                    <div class="filters-viewsearch d-flex align-items-center gap-2">
-                        <label>View:</label>
-                        <span class="view-icons"><i class="fas fa-th-large"></i> <i class="fas fa-th-list"></i></span>
-                        <input class="search-box" type="text" style="width:170px;padding-left: 10px;">
+                    <div class="col-md-6">
+                        <div class="faq-form-box p-5">
+                            <h3 class="faq-form-title mb-4">Ask a Question</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control faq-input" placeholder="Your Name*" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control faq-input" placeholder="Subject*" required>
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="form-control faq-input" rows="5" placeholder="Type Your Message*"
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn faq-btn">Send Mail</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="product-cards">
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> Accumsan tincidunt </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
+        </section>
 
 
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Brand logos -->
-        <div class="container mt-5 reveal">
-            <section class="fade-right reveal brand mt-5 mb-5 ">
-                <div class="brand-logos d-flex justify-content-between align-items-center my-5">
+        <div class="container mt-5">
+            <section class="fade-right reveal brand mt-5 mb-5 pt-3 pb-5 margin-auto">
+                <div class="brand-logos d-flex align-items-center my-5">
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153723.png" alt="Brand 1"
                             class="brand-logo img-fluid" /></a>
                     <a href="#"><img src="./images/Screenshot 2025-05-20 153816.png" alt="Brand 2"
@@ -459,8 +242,8 @@
                 </div>
             </section>
         </div>
-    </main>
 
+    </main>
 
 
     <footer class="bg-light text-secondary mt-5">
@@ -545,9 +328,9 @@
 
     </footer>
 
-    <script src="js/common/ui.js"></script>
-    <script src="js/shoplist/shoplist.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 
 </html>
