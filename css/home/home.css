@@ -57,7 +57,7 @@ header.header-fade:hover {
     background-color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
-    height: auto;
+    height: 83%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
@@ -1585,6 +1585,13 @@ header.header-fade:hover {
 
 
 }
+@media screen and (max-width: 575px) {
+    .card__featured-product {
+        height: 90%!important;
+    }
+
+
+}
 
 
 
@@ -1813,3 +1820,10 @@ header.header-fade:hover {
         padding-top: -10px;
     }
 } */
+
+@media screen and (min-width:774px) and (max-width: 992px) {
+    .card__featured-product {
+        height: 90%!important;
+    }
+    
+}
