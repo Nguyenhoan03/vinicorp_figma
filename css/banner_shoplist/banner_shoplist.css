@@ -9,7 +9,9 @@
 }
 
 .breadcrumb-link {
-  color: red;
+  color: #FB2E86;
+  font-size: 16px;
+  font-family: 'lato', sans-serif;
 }
 
 .banner-shoplist .banner-shoplist__title {

@@ -1,9 +1,25 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-shadow: border-box;
+:root {
+    --title-color: #1D3178;
+    --text-color: #8A8FB9;
+    --checkbox-color: #603EFF;
+    --font-family: 'Josefin Sans', sans-serif;
+    --background-box: #F8F8FD;
+    --font-size-title: 2.25rem;
+    --font-size-content: 1rem;
+    --purple: #7E33E0;
+    --blue: #2F1AC4;
+    --cyan: #38C8F8;
+    --pink: #FB2E86;
+    --orange: #FFB265;
+    --green: #3FD0B4;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: var(--font-family);
+}
 main {
   padding-top: 127px;
 }
@@ -42,7 +58,6 @@ header.header-fade:hover {
   align-items: center;
   gap: 8px;
   margin-bottom: 30px;
-  justify-content: flex-end;
 }
 
 .filters label {
@@ -235,8 +250,138 @@ header.header-fade:hover {
   transform: none;
 }
 
-
-
+/* Tiêu đề filter */
+.filter-title {
+  font-weight: bold;
+  color: #1D3178;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  
+  font-family: 'Josefin Sans', sans-serif;
+  display: inline-block;
+  border-bottom: 2px solid #C1C8E1;
+  padding-bottom: 2px;
+}
+.filter-title.pink { color: #FB2E86; }
+.filter-title.rating-title { color: #FFB800; }
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  position: relative;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+  padding-left: 28px;
+  color: #8A8FB9;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  height: 18px;
+  width: 18px;
+  background-color: #E5E0FC;
+  border: 2px solid #C1C8E1;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+.custom-checkbox.pink input[type="checkbox"]:checked ~ .checkmark {
+  background-color: #FF3EB2;
+  border-color: #FF3EB2;
+}
+.custom-checkbox.rating input[type="checkbox"]:checked ~ .checkmark,
+.custom-checkbox.rating .checkmark {
+  background: #FFD600;
+  border-color: #FFD600;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+  display: block;
+}
+.custom-checkbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.stars {
+  margin-left: 8px;
+  color: #FFD600;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+.rating-count {
+  color: #1D3178;
+  margin-left: 6px;
+  font-size: 0.95em;
+  font-weight: 500;
+}
+.price-search {
+  margin-top: 0.5rem;
+}
+.price-input {
+  border: 1px solid #C1C8E1;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.95em;
+  color: #1D3178;
+  width: 120px;
+  background: #fff;
+}
+.price-search-btn {
+  background: none;
+  border: none;
+  color: #C1C8E1;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.color-filter-list {
+  margin-top: 0.5rem;
+}
+.color-dot-label {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: #8A8FB9;
+  gap: 6px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.color-dot {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-right: 3px;
+  border: none;
+  box-shadow: 0 0 0 1px #C1C8E1;
+}
+.color-dot.blue { background: #2F1AC4; }
+.color-dot.orange { background: #FFB265; }
+.color-dot.brown { background: #B07C4A; }
+.color-dot.green { background: #3FD0B4; }
+.color-dot.purple { background: #7E33E0; }
+.color-dot.sky { background: #38C8F8; }
 
 @media screen and (max-width: 764px) {
 
@@ -332,6 +477,9 @@ header.header-fade:hover {
     gap: 10px;
     margin-bottom: 0px;
   }
+}
+.sidebar-filter {
+    margin-top: 3.2rem;
 }
 
 @media screen and (max-width: 390px) {

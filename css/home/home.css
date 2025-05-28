@@ -26,14 +26,14 @@ header {
     transition: opacity 0.2s;
 }
 
-header.header-fade {
+/* header.header-fade {
     opacity: 0.6;
     transition: opacity 0.3s;
 }
 
 header.header-fade:hover {
     opacity: 1;
-}
+} */
 
 .reveal {
     opacity: 0;
@@ -76,23 +76,47 @@ header.header-fade:hover {
     border-radius: 8px;
 }
 
+
+
+
 .product-info {
-    flex: 1;
-    margin-left: -1px;
+    position: relative;
+    overflow: hidden;
     background-color: #fff;
-    background: linear-gradient(to left, #ffffff 50%, blue 50%);
-    background-size: 200% 100%;
+    transition: box-shadow 0.3s ease;
     height: 100%;
-    background-position: right bottom;
-    transition: background-position 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-info::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2F1AC4;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.card__featured-product:hover .product-info::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+.product-info > * {
+    position: relative;
+    z-index: 1;
 }
 
 .card__featured-product:hover .product-info {
-    background-color: #3F43D7;
-    background-position: left bottom;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
 
 .card__featured-product:hover .card__featured__viewdetail {
     display: block;

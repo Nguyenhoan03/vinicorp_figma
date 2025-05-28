@@ -23,9 +23,7 @@
 
 
 
-.hecto_demo {
-    width:100%!important;
-}
+
 
 .checkout-form {
   background: var(--background-box);
@@ -67,6 +65,7 @@
   font-size: 0.9rem;
   text-decoration: none;
   font-family: 'Lato';
+  margin-top: -1rem;
 }
 
 .section h3 {
@@ -177,20 +176,22 @@ p.title {
 .items {
   background: #fff;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
+  margin-top: -0.7rem;
 }
 
 .item {
   display: flex;
   align-items: center;
-  
   border-bottom: 1px solid rgb(201, 201, 201);
   box-shadow: 0 2px 4px rgba(226, 223, 223, 0.1);
+  padding-bottom: 0.6rem;
+  margin-top: 0.6rem;
 }
 
 .item img {
   width: 60px;
-  height: 60px;
+  height: 75px;
   object-fit: cover;
   border-radius: 5px;
   margin-right: 1rem;
@@ -272,4 +273,18 @@ p.title {
         align-items: center;
     }
     
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+    
+    .items {
+       margin-top: -1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 765px) {
+      .items {
+        margin-top: 1.5rem;
+      }
 }

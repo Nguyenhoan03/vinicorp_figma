@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma to HTML</title>
+    <link rel="stylesheet" href="css/shop_left_sidebar/shop_left_sidebar.css">
+    <link rel="stylesheet" href="css/home/header.css">
+    <!-- <link rel="stylesheet" href="css/home/banner.css"> -->
+    <link rel="stylesheet" href="css/home/footer.css">
+    <link rel="stylesheet" href="css/banner_shoplist/banner_shoplist.css">
+
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+    <header>
+        <!-- Top bar desktop/tablet -->
+        <div class="top-bar d-none d-lg-block">
+            <div class="container">
+                <div class="row align-items-center top-bar-content">
+                    <div class="col-md-6 d-flex align-items-center top-bar-left gap-3">
+                        <span><i class="fa-regular fa-envelope"></i> mhhasanul@gmail.com</span>
+                        <span><i class="fa-solid fa-phone"></i> (12345)67890</span>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-md-end align-items-center top-bar-right gap-3">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle text-white text-decoration-none d-flex align-items-center gap-1"
+                                href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                English <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                                <li><a class="dropdown-item" href="#">Vietnamese</a></li>
+                                <li><a class="dropdown-item" href="#">Japan</a></li>
+                                <li><a class="dropdown-item" href="#">Korea</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle text-white text-decoration-none d-flex align-items-center gap-1"
+                                href="#" role="button" id="dropdownCurrency" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                USD <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownCurrency">
+                                <li><a class="dropdown-item" href="#">VNĐ</a></li>
+                                <li><a class="dropdown-item" href="#">Won</a></li>
+                                <li><a class="dropdown-item" href="#">Man</a></li>
+                            </ul>
+                        </div>
+                        <span><i class="fa-regular fa-user"></i> Login</span>
+                        <span><i class="fa-regular fa-heart"></i> Wishlist</span>
+                        <span><i class="fa-solid fa-cart-shopping"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top bar mobile -->
+        <div class="top-bar-mobile d-flex d-lg-none justify-content-between align-items-center px-3 py-1"
+            style="background:#a259d9;color:#fff;font-size:15px;">
+            <span><i class="fa-regular fa-envelope"></i> nmh@gmail.com </span>
+            <span class="span_phonenumber"><i class="fa-solid fa-phone"></i> (12345)67890</span>
+            <span class="dropdown dropdown-toggle" id="dropdownLanguage" data-bs-toggle="dropdown"> English <i
+                    class="fa-solid fa-chevron-down"></i>
+                <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                    <li><a class="dropdown-item" href="#">Vietnamese</a></li>
+                    <li><a class="dropdown-item" href="#">Japan</a></li>
+                    <li><a class="dropdown-item" href="#">Korea</a></li>
+                </ul>
+            </span>
+            <span><i class="fa-regular fa-heart"></i> Wishlist</span>
+            <span><i class="fa-solid fa-cart-shopping"></i></span>
+        </div>
+        <!-- Nav bar -->
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row mobile_setting align-items-center nav-bar-content d-flex">
+                    <!-- Mobile header -->
+                    <div class="d-flex mobile__header d-lg-none justify-content-between align-items-center py-2">
+                        <!-- Hamburger left: mở offcanvas menu -->
+                        <button class="navbar-toggler border-0 bg-transparent p-0 ms-2" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                            <span class="fa-solid fa-bars fs-2"></span>
+                        </button>
+                        <!-- Logo center -->
+                        <div class="logo text-center flex-grow-1" style="font-size:2rem;font-weight:bold;">Hekto</div>
+                        <!-- Icons right -->
+                        <div class="d-flex align-items-center gap-3 me-2">
+                            <a href="#" class="text-dark"><i class="fa-regular fa-user fs-4"></i></a>
+                            <a href="#" class="text-dark"><i class="fa-solid fa-magnifying-glass fs-4"></i></a>
+                        </div>
+                    </div>
+                    <!-- Desktop/tablet header -->
+                    <div class="col-6 col-lg-1 logo logo_desktop d-none d-lg-block">Hekto</div>
+                    <!-- <div class="col-6 d-lg-none text-end d-none d-md-block">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavCollapse" aria-controls="mainNavCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div> -->
+                    <div class="col-12 col-lg-7 d-none d-md-block">
+                        <nav class="main-nav collapse d-lg-flex align-items-center gap-4" id="mainNavCollapse">
+                            <div class="dropdown">
+                                <a href="#" class="active dropdown-toggle" id="dropdownHome" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Home <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownHome">
+                                    <li><a class="dropdown-item" href="./home.html">Home page</a></li>
+                                    <li><a class="dropdown-item" href="./shoplist.html">Shoplist</a></li>
+                                    <li><a class="dropdown-item" href="./productdetail.html">Product detail</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Pages</a>
+                            <a href="#">Products</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Shop</a>
+                            <a href="#">Contact</a>
+                        </nav>
+                    </div>
+                    <div class="col-12 col-lg-3 search-box__icon d-none d-lg-flex justify-content-lg-end mt-3 mt-lg-0">
+                        <form class="search-box d-flex w-100">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Offcanvas menu tab cho mobile -->
+        <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasMenu"
+            aria-labelledby="offcanvasMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <nav class="nav flex-column gap-2">
+                    <a href="#" class="active dropdown-toggle" id="dropdownHome" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Home <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownHome">
+                        <li><a class="dropdown-item" href="./home.html">Home page</a></li>
+                        <li><a class="dropdown-item" href="./shoplist.html">Shoplist</a></li>
+                        <li><a class="dropdown-item" href="./productdetail.html">Product detail</a></li>
+                    </ul>
+                    <a class="nav-link" href="#">Pages</a>
+                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="#">Shop</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="banner-shoplist">
+            <div class="banner-shoplist__content container align-items-center">
+                <p class="banner-shoplist__title">Shop Left Sidebar</p>
+                <ul class="d-flex gap-2 text-align-start">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Page</a></li>
+                    <li><a href="/shoplist.html" class="breadcrumb-link">Shop Left Sidebar</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mt-5 mb-5">
+            <div class="d-flex shoplist__filter row justify-content-between reveal">
+                <div class="col-12 col-lg-4 ">
+                    <div class="header-title">Ecommerce Accesories & Fashion item</div>
+                    <div class="header-sub">About 9,620 results (0.62 seconds)</div>
+                </div>
+                <div class="filters col-12 col-lg-7">
+                    <div class="filters-row d-flex flex-wrap align-items-center gap-2">
+                        <label>Per Page:</label>
+                        <input type="text" style="width:50px;padding-left: 10px;">
+                        <label class="mx-2">Sort By:</label>
+                        <select>
+                            <option>Best Match</option>
+                            <option>Price Low</option>
+                            <option>Price High</option>
+                        </select>
+                    </div>
+                    <div class="filters-viewsearch d-flex align-items-center gap-2">
+                        <label>View:</label>
+                        <span class="view-icons"><i class="fas fa-th-large"></i> <i class="fas fa-th-list"></i></span>
+                        <input class="search-box" type="text" style="width:170px;padding-left: 10px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <div class="sidebar-filter">
+                        <!-- Product Brand -->
+                        <div class="filter-group mb-4">
+                            <div class="filter-title">Product Brand</div>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Coaster Furniture
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Fusion Dot High Fashion
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Unique Furniture Restor
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Dream Furniture Flipping
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Young Repurposed
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Green DIY furniture
+                            </label>
+                        </div>
+
+                        <!-- Discount Offer -->
+                        <div class="filter-group mb-4">
+                            <div class="filter-title pink">Discount Offer</div>
+                            <label class="custom-checkbox pink">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                20% Cashback
+                            </label>
+                            <label class="custom-checkbox pink">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                5% Cashback Offer
+                            </label>
+                            <label class="custom-checkbox pink">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                25% Discount Offer
+                            </label>
+                        </div>
+
+                        <!-- Rating Item -->
+                        <div class="filter-group mb-4">
+                            <div class="filter-title rating-title">Rating Item</div>
+                            <label class="custom-checkbox rating yellow">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="stars">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                </span>
+                                <span class="rating-count">(2341)</span>
+                            </label>
+                            <label class="custom-checkbox rating yellow">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="stars">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                </span>
+                                <span class="rating-count">(1726)</span>
+                            </label>
+                            <label class="custom-checkbox rating yellow">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="stars">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                </span>
+                                <span class="rating-count">(258)</span>
+                            </label>
+                            <label class="custom-checkbox rating yellow">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="stars">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                </span>
+                                <span class="rating-count">(65)</span>
+                            </label>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="filter-group mb-4">
+                            <div class="filter-title">Categories</div>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Prestashop
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Magento
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Bigcommerce
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                osCommerce
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                3dcart
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Bags
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Accessories
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Jewellery
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Watches
+                            </label>
+                        </div>
+
+                        <!-- Price Filter -->
+                        <div class="filter-group mb-4">
+                            <div class="filter-title">Price Filter</div>
+                            <label class="custom-checkbox pink">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                $0.00 - $150.00
+                            </label>
+                            <label class="custom-checkbox pink">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                $150.00 - $350.00
+                            </label>
+                            <label class="custom-checkbox pink">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                $150.00 - $504.00
+                            </label>
+                            <label class="custom-checkbox pink">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                $450.00 +
+                            </label>
+                            <div class="price-search mt-2 d-flex align-items-center" style="gap:6px;">
+                                <input type="text" class="price-input" placeholder="$100.00 - 2000.00">
+                                <button class="price-search-btn" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Filter By Color -->
+                        <div class="filter-group mb-4">
+                            <div class="filter-title" style="margin-bottom: 0.7rem;">Filter By Color</div>
+                            <div class="color-filter-list d-flex flex-wrap" style="gap: 18px;">
+                                <label class="color-dot-label"><span class="color-dot blue"></span> Blue</label>
+                                <label class="color-dot-label"><span class="color-dot orange"></span> Orange</label>
+                                <label class="color-dot-label"><span class="color-dot brown"></span> Brown</label>
+                                <label class="color-dot-label"><span class="color-dot green"></span> Green</label>
+                                <label class="color-dot-label"><span class="color-dot purple"></span> Purple</label>
+                                <label class="color-dot-label"><span class="color-dot sky"></span> Sky</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-cards col-md-9">
+                    <div class="product-card mt-5 p-2 reveal">
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
+                            alt="Product">
+                        <div class="product-info">
+                            <div class="product-info__title d-flex justify-content-between">
+                                <span class="product-title"><a href=""> Accumsan tincidunt </a></span>
+                                <span class="product-colors">
+                                    <span class="color-dot color1"></span>
+                                    <span class="color-dot color2"></span>
+                                    <span class="color-dot color3"></span>
+                                </span>
+                            </div>
+                            <div class="d-flex">
+                                <div class="product-price">
+                                    $26.00
+                                    <span class="old-price">$52.00</span>
+                                    <span class="discount"> </span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-desc pt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
+                                phasellus
+                                non in justo.
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="action-btn"><i class="far fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="product-card mt-5 p-2 reveal">
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
+                            alt="Product">
+                        <div class="product-info">
+                            <div class="product-info__title d-flex justify-content-between">
+                                <span class="product-title"><a href=""> In nulla </a></span>
+                                <span class="product-colors">
+                                    <span class="color-dot color1"></span>
+                                    <span class="color-dot color2"></span>
+                                    <span class="color-dot color3"></span>
+                                </span>
+                            </div>
+                            <div class="d-flex">
+                                <div class="product-price">
+                                    $26.00
+                                    <span class="old-price">$52.00</span>
+                                    <span class="discount"> </span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-desc pt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
+                                phasellus
+                                non in justo.
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="action-btn"><i class="far fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card mt-5 p-2 reveal">
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
+                            alt="Product">
+                        <div class="product-info">
+                            <div class="product-info__title d-flex justify-content-between">
+                                <span class="product-title"><a href=""> In nulla </a></span>
+                                <span class="product-colors">
+                                    <span class="color-dot color1"></span>
+                                    <span class="color-dot color2"></span>
+                                    <span class="color-dot color3"></span>
+                                </span>
+                            </div>
+                            <div class="d-flex">
+                                <div class="product-price">
+                                    $26.00
+                                    <span class="old-price">$52.00</span>
+                                    <span class="discount"> </span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-desc pt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
+                                phasellus
+                                non in justo.
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="action-btn"><i class="far fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card mt-5 p-2 reveal">
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
+                            alt="Product">
+                        <div class="product-info">
+                            <div class="product-info__title d-flex justify-content-between">
+                                <span class="product-title"><a href=""> In nulla </a></span>
+                                <span class="product-colors">
+                                    <span class="color-dot color1"></span>
+                                    <span class="color-dot color2"></span>
+                                    <span class="color-dot color3"></span>
+                                </span>
+                            </div>
+                            <div class="d-flex">
+                                <div class="product-price">
+                                    $26.00
+                                    <span class="old-price">$52.00</span>
+                                    <span class="discount"> </span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-desc pt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
+                                phasellus
+                                non in justo.
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="action-btn"><i class="far fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card mt-5 p-2 reveal">
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
+                            alt="Product">
+                        <div class="product-info">
+                            <div class="product-info__title d-flex justify-content-between">
+                                <span class="product-title"><a href=""> In nulla </a></span>
+                                <span class="product-colors">
+                                    <span class="color-dot color1"></span>
+                                    <span class="color-dot color2"></span>
+                                    <span class="color-dot color3"></span>
+                                </span>
+                            </div>
+                            <div class="d-flex">
+                                <div class="product-price">
+                                    $26.00
+                                    <span class="old-price">$52.00</span>
+                                    <span class="discount"> </span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-desc pt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
+                                phasellus
+                                non in justo.
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="action-btn"><i class="far fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card mt-5 p-2 reveal">
+                        <img class="product-image"
+                            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
+                            alt="Product">
+                        <div class="product-info">
+                            <div class="product-info__title d-flex justify-content-between">
+                                <span class="product-title"><a href=""> In nulla </a></span>
+                                <span class="product-colors">
+                                    <span class="color-dot color1"></span>
+                                    <span class="color-dot color2"></span>
+                                    <span class="color-dot color3"></span>
+                                </span>
+                            </div>
+                            <div class="d-flex">
+                                <div class="product-price">
+                                    $26.00
+                                    <span class="old-price">$52.00</span>
+                                    <span class="discount"> </span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-desc pt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
+                                phasellus
+                                non in justo.
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="action-btn"><i class="far fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Brand logos -->
+        <div class="container mt-5 reveal">
+            <section class="fade-right reveal brand mt-5 mb-5 ">
+                <div class="brand-logos d-flex justify-content-between align-items-center my-5">
+                    <a href="#"><img src="./images/Screenshot 2025-05-20 153723.png" alt="Brand 1"
+                            class="brand-logo img-fluid" /></a>
+                    <a href="#"><img src="./images/Screenshot 2025-05-20 153816.png" alt="Brand 2"
+                            class="brand-logo img-fluid" /></a>
+                    <a href="#"><img src="./images/Screenshot 2025-05-20 153833.png" alt="Brand 3"
+                            class="brand-logo img-fluid" /></a>
+                    <a href="#"><img src="./images/Screenshot 2025-05-20 153852.png" alt="Brand 4"
+                            class="brand-logo img-fluid" /></a>
+                    <a href="#"><img src="./images/Screenshot 2025-05-20 153911.png" alt="Brand 5"
+                            class="brand-logo img-fluid" /></a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+    <footer class="bg-light text-secondary mt-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4">
+                    <h3 class="h4 fw-bold mb-3 text-dark">Hekto</h3>
+                    <div class="mb-4">
+                        <p class="mb-2">Đăng ký nhận tin:</p>
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter Email Address" class="form-control">
+                            <button class="btn text-white" style="background-color: #FF1B6A;">Sign Up</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="fw-semibold">Contact Info</p>
+                        <p class="small">17 Princess Road, London, Greater London NW1 8JR, UK</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-2">
+                    <h4 class="h6 fw-semibold mb-3 text-dark">Categories</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Laptops & Computers</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Cameras &
+                                Photography</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Smart Phones &
+                                Tablets</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Video Games &
+                                Consoles</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Waterproof
+                                Headphones</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <h4 class="h6 fw-semibold mb-3 text-dark">Customer Care</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">My Account</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Discount</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Returns</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Orders History</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Order Tracking</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <h4 class="h6 fw-semibold mb-3 text-dark">Pages</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Browse the Shop</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Category</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Pre-Built Pages</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Visual Composer
+                                Elements</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WooCommerce Pages</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="footer-text">&copy; Webecy - All Rights Reserved</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/common/ui.js"></script>
+    <script src="js/shoplist/shoplist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
