@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figma to HTML</title>
-    <link rel="stylesheet" href="css/faq/faq.css">
+    <link rel="stylesheet" href="css/hecto_demo/hecto_demo.css">
     <link rel="stylesheet" href="css/home/header.css">
     <link rel="stylesheet" href="css/banner_shoplist/banner_shoplist.css">
     <!-- <link rel="stylesheet" href="css/home/banner.css"> -->
     <link rel="stylesheet" href="css/home/footer.css">
 
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 
 <body>
     <header>
@@ -168,57 +167,116 @@
     <main>
         <div class="banner-shoplist">
             <div class="banner-shoplist__content container align-items-center">
-                <p class="banner-shoplist__title">FAQ</p>
+                <p class="banner-shoplist__title">Hekto Demo</p>
                 <ul class="d-flex gap-2 text-align-start">
                     <li><a href="/">Home</a></li>
                     <li><a href="#">Page</a></li>
-                    <li><a href="/shoplist.html" class="breadcrumb-link">Faq</a></li>
+                    <li><a href="/contact.html" class="breadcrumb-link">Hekto Demo</a></li>
                 </ul>
             </div>
         </div>
 
         <section class="mt-5">
-            <div class="information container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="faq-title mb-4">Generel Information</h2>
-                        <div class="information_child">
-                            <p class="faq-question mb-1">Eu dictumst cum at sed euismod condimentum?</p>
-                            <span class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
-                                sed tristique mollis vitae, consequat gravida sagittis.</span>
-                        </div>
-                        <div class="information_child">
-                            <p class="faq-question mb-1">Magna bibendum est fermentum eros.</p>
-                            <span class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
-                                sed tristique mollis vitae, consequat gravida sagittis.</span>
-                        </div>
-                        <div class="information_child">
-                            <p class="faq-question mb-1">Odio muskana hak eris conseekin sceleton?</p>
-                            <span class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
-                                sed tristique mollis vitae, consequat gravida sagittis.</span>
-                        </div>
-                        <div class="information_child">
-                            <p class="faq-question mb-1">Elit id blandit sabara bai velit gua mara?</p>
-                            <span class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
-                                sed tristique mollis vitae, consequat gravida sagittis.</span>
+            <div class="container container_hecto_demo">
+                <h2 class="hecto_demo__title">Hekto Demo</h2>
+                <p class="breadcrumbs">Cart / Information / <strong>Shipping</strong> / Payment</p>
+                <div class="row hecto_demo">
+                    <div class="hecto_demo__left col-md-8">
+
+                        <div class="checkout-form">
+                            <div class="section">
+                                <div class="section-header">
+                                    <h3>Contact Information</h3>
+                                    <a href="#">Already have an account? Log in</a>
+                                </div>
+                                <input type="email" placeholder="Email or mobile phone number" />
+                                <label class="checkbox-container">
+                                    <input type="checkbox" checked />
+                                    Keep me up to date on news and exclusive offers
+                                </label>
+                            </div>
+
+                            <div class="section">
+                                <h3>Shipping address</h3>
+                                <div class="row-inputs">
+                                    <input type="text" placeholder="First name (optional)" />
+                                    <input type="text" placeholder="Last name" />
+                                </div>
+                                <input type="text" placeholder="Address" />
+                                <input type="text" placeholder="Apartment, suite, etc (optional)" />
+                                <input type="text" placeholder="City" />
+                                <div class="row-inputs">
+                                    <input type="text" placeholder="Bangladesh" />
+                                    <input type="text" placeholder="Postal Code" />
+                                </div>
+                                <button class="continue-btn"> Continue Shipping</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 faq__box pt-5">
-                        <div class="faq-form-box">
-                            <h3 class="faq-form-title mb-4">Ask a Question</h3>
-                            <form class="faq-forms">
-                                <div class="faq-form__input">
-                                    <input type="text" class="form-control faq-input" placeholder="Your Name*" required>
+                    <div class="cart-summary col-md-4">
+                        <div class="items">
+
+                            <div class="item">
+                                <img src="./images/Rectangle 145.png" alt="Product" />
+                                <div class="item-details">
+                                    <p class="title">Ut diam consequat</p>
+                                    <p class="desc">Color: Brown<br>Size: XL</p>
                                 </div>
-                                <div class="faq-form__input">
-                                    <input type="text" class="form-control faq-input" placeholder="Subject*" required>
+                                <p class="price">$32.00</p>
+                            </div>
+
+
+                            <div class="item">
+                                <img src="./images/Rectangle 144.png" alt="Product" />
+                                <div class="item-details">
+                                    <p class="title">Ut diam consequat</p>
+                                    <p class="desc">Color: Brown<br>Size: XL</p>
                                 </div>
-                                <div class="faq-form__input">
-                                    <textarea class="form-control faq-input" rows="5" placeholder="Type Your Message*"
-                                        required></textarea>
+                                <p class="price">$32.00</p>
+                            </div>
+
+                            <div class="item">
+                                <img src="./images/Rectangle 144.png" alt="Product" />
+                                <div class="item-details">
+                                    <p class="title">Ut diam consequat</p>
+                                    <p class="desc">Color: Brown<br>Size: XL</p>
                                 </div>
-                                <button type="submit" class="btn faq-btn"><a href=""> Send Mail </a></button>
-                            </form>
+                                <p class="price">$32.00</p>
+                            </div>
+
+                            <div class="item">
+                                <img src="./images/Rectangle 145.png" alt="Product" />
+                                <div class="item-details">
+                                    <p class="title">Ut diam consequat</p>
+                                    <p class="desc">Color: Brown<br>Size: XL</p>
+                                </div>
+                                <p class="price">$32.00</p>
+                            </div>
+
+                            <div class="item">
+                                <img src="./images/Rectangle 144.png" alt="Product" />
+                                <div class="item-details">
+                                    <p class="title">Ut diam consequat</p>
+                                    <p class="desc">Color: Brown<br>Size: XL</p>
+                                </div>
+                                <p class="price">$32.00</p>
+                            </div>
+                        </div>
+
+                        <div class="cart-totals-box mb-4">
+                            <div class="d-flex justify-content-between mb-2 border-bottom">
+                                <span class="cart-totals-label">Subtotals:</span>
+                                <span class="cart-totals-value">£219.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2 border-bottom">
+                                <span class="cart-totals-label">Totals:</span>
+                                <span class="cart-totals-value">£325.00</span>
+                            </div>
+                            <div class="mb-3">
+                                <span class="cart-totals-note"><i class="fa fa-check-circle"></i> Shipping &amp;
+                                    taxes calculated at checkout</span>
+                            </div>
+                            <button class="btn cart-btn-checkout w-100">Proceed To Checkout</button>
                         </div>
                     </div>
                 </div>
@@ -227,7 +285,8 @@
 
 
         <section class="fade-right reveal brand mt-5 mb-5">
-            <div class="brand-logos d-flex justify-content-between align-items-center my-5" style="width:85%;margin: auto;">
+            <div class="brand-logos d-flex justify-content-between align-items-center my-5"
+                style="width:85%;margin: auto;">
                 <a href="https://fashionlive.com" target="_blank">
                     <img src="./images/Screenshot 2025-05-20 153723.png" alt="Fashion Live"
                         class="brand-logo img-fluid" />
@@ -333,8 +392,11 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/shoppingcart/shoppingcart.js"></script>
+
+
+
 
 </body>
-
 
 </html>

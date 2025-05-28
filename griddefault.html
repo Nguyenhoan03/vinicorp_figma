@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figma to HTML</title>
-    <link rel="stylesheet" href="css/shoplist/index.css">
+    <link rel="stylesheet" href="css/griddefault/griddefault.css">
     <link rel="stylesheet" href="css/home/header.css">
     <!-- <link rel="stylesheet" href="css/home/banner.css"> -->
     <link rel="stylesheet" href="css/home/footer.css">
@@ -168,11 +168,11 @@
     <main>
         <div class="banner-shoplist">
             <div class="banner-shoplist__content container align-items-center">
-                <p class="banner-shoplist__title">Shop List</p>
+                <p class="banner-shoplist__title">Grid Default</p>
                 <ul class="d-flex gap-2 text-align-start">
                     <li><a href="/">Home</a></li>
                     <li><a href="#">Page</a></li>
-                    <li><a href="/shoplist.html" class="breadcrumb-link">Shop List</a></li>
+                    <li><a href="/shoplist.html" class="breadcrumb-link">Grid Default</a></li>
                 </ul>
             </div>
         </div>
@@ -201,245 +201,238 @@
                     </div>
                 </div>
             </div>
-            <div class="product-cards">
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> Accumsan tincidunt </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
 
 
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
+            <section class="grid__product container mt-5">
+                <div class="row">
+                    <div class="col-md-3 latest-products__item">
+                        <div class="latest-products__img-wrapper position-relative">
+                            <img src="./images/image 23.png" alt="Comfort Handy Craft" class="latest-products__img" />
+                            <div class="latest-products__actions">
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="latest-products__action-btn"><i class="fa-regular fa-heart"></i></button>
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="latest-products__info">
+                            <span class="latest-products__name">Comfort Handy Craft</span>
                             <span class="product-colors">
                                 <span class="color-dot color1"></span>
                                 <span class="color-dot color2"></span>
                                 <span class="color-dot color3"></span>
                             </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
+                            <span class="latest-products__prices">
+                                <span class="latest-products__price">$42.00</span>
+                                <span class="latest-products__price--old">$65.00</span>
                             </span>
                         </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
                     </div>
-                </div>
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card mt-5 p-2 reveal">
-                    <img class="product-image"
-                        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80"
-                        alt="Product">
-                    <div class="product-info">
-                        <div class="product-info__title d-flex justify-content-between">
-                            <span class="product-title"><a href=""> In nulla </a></span>
-                            <span class="product-colors">
-                                <span class="color-dot color1"></span>
-                                <span class="color-dot color2"></span>
-                                <span class="color-dot color3"></span>
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <div class="product-price">
-                                $26.00
-                                <span class="old-price">$52.00</span>
-                                <span class="discount"> </span>
-                            </div>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="product-desc pt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in
-                            phasellus
-                            non in justo.
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="action-btn"><i class="far fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
+                      <div class="col-md-3 latest-products__item">
+                        <div class="latest-products__img-wrapper position-relative">
+                            <img src="./images/image 23.png" alt="Comfort Handy Craft" class="latest-products__img" />
+                            <div class="latest-products__actions">
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="latest-products__action-btn"><i class="fa-regular fa-heart"></i></button>
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="latest-products__info">
+                            <span class="latest-products__name">Comfort Handy Craft</span>
+                            <span class="product-colors">
+                                <span class="color-dot color1"></span>
+                                <span class="color-dot color2"></span>
+                                <span class="color-dot color3"></span>
+                            </span>
+                            <span class="latest-products__prices">
+                                <span class="latest-products__price">$42.00</span>
+                                <span class="latest-products__price--old">$65.00</span>
+                            </span>
+                        </div>
+                    </div>
+
+                      <div class="col-md-3 latest-products__item">
+                        <div class="latest-products__img-wrapper position-relative">
+                            <img src="./images/image 23.png" alt="Comfort Handy Craft" class="latest-products__img" />
+                            <div class="latest-products__actions">
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="latest-products__action-btn"><i class="fa-regular fa-heart"></i></button>
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="latest-products__info">
+                            <span class="latest-products__name">Comfort Handy Craft</span>
+                            <span class="product-colors">
+                                <span class="color-dot color1"></span>
+                                <span class="color-dot color2"></span>
+                                <span class="color-dot color3"></span>
+                            </span>
+                            <span class="latest-products__prices">
+                                <span class="latest-products__price">$42.00</span>
+                                <span class="latest-products__price--old">$65.00</span>
+                            </span>
+                        </div>
+                    </div>
+
+                      <div class="col-md-3 latest-products__item">
+                        <div class="latest-products__img-wrapper position-relative">
+                            <img src="./images/image 23.png" alt="Comfort Handy Craft" class="latest-products__img" />
+                            <div class="latest-products__actions">
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="latest-products__action-btn"><i class="fa-regular fa-heart"></i></button>
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="latest-products__info">
+                            <span class="latest-products__name">Comfort Handy Craft</span>
+                            <span class="product-colors">
+                                <span class="color-dot color1"></span>
+                                <span class="color-dot color2"></span>
+                                <span class="color-dot color3"></span>
+                            </span>
+                            <span class="latest-products__prices">
+                                <span class="latest-products__price">$42.00</span>
+                                <span class="latest-products__price--old">$65.00</span>
+                            </span>
+                        </div>
+                    </div>
+
+                      <div class="col-md-3 latest-products__item">
+                        <div class="latest-products__img-wrapper position-relative">
+                            <img src="./images/image 23.png" alt="Comfort Handy Craft" class="latest-products__img" />
+                            <div class="latest-products__actions">
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="latest-products__action-btn"><i class="fa-regular fa-heart"></i></button>
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="latest-products__info">
+                            <span class="latest-products__name">Comfort Handy Craft</span>
+                            <span class="product-colors">
+                                <span class="color-dot color1"></span>
+                                <span class="color-dot color2"></span>
+                                <span class="color-dot color3"></span>
+                            </span>
+                            <span class="latest-products__prices">
+                                <span class="latest-products__price">$42.00</span>
+                                <span class="latest-products__price--old">$65.00</span>
+                            </span>
+                        </div>
+                    </div>
+
+                      <div class="col-md-3 latest-products__item">
+                        <div class="latest-products__img-wrapper position-relative">
+                            <img src="./images/image 23.png" alt="Comfort Handy Craft" class="latest-products__img" />
+                            <div class="latest-products__actions">
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="latest-products__action-btn"><i class="fa-regular fa-heart"></i></button>
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="latest-products__info">
+                            <span class="latest-products__name">Comfort Handy Craft</span>
+                            <span class="product-colors">
+                                <span class="color-dot color1"></span>
+                                <span class="color-dot color2"></span>
+                                <span class="color-dot color3"></span>
+                            </span>
+                            <span class="latest-products__prices">
+                                <span class="latest-products__price">$42.00</span>
+                                <span class="latest-products__price--old">$65.00</span>
+                            </span>
+                        </div>
+                    </div>
+
+                      <div class="col-md-3 latest-products__item">
+                        <div class="latest-products__img-wrapper position-relative">
+                            <img src="./images/image 23.png" alt="Comfort Handy Craft" class="latest-products__img" />
+                            <div class="latest-products__actions">
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="latest-products__action-btn"><i class="fa-regular fa-heart"></i></button>
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="latest-products__info">
+                            <span class="latest-products__name">Comfort Handy Craft</span>
+                            <span class="product-colors">
+                                <span class="color-dot color1"></span>
+                                <span class="color-dot color2"></span>
+                                <span class="color-dot color3"></span>
+                            </span>
+                            <span class="latest-products__prices">
+                                <span class="latest-products__price">$42.00</span>
+                                <span class="latest-products__price--old">$65.00</span>
+                            </span>
+                        </div>
+                    </div>
+
+                      <div class="col-md-3 latest-products__item">
+                        <div class="latest-products__img-wrapper position-relative">
+                            <img src="./images/image 23.png" alt="Comfort Handy Craft" class="latest-products__img" />
+                            <div class="latest-products__actions">
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="latest-products__action-btn"><i class="fa-regular fa-heart"></i></button>
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="latest-products__info">
+                            <span class="latest-products__name">Comfort Handy Craft</span>
+                            <span class="product-colors">
+                                <span class="color-dot color1"></span>
+                                <span class="color-dot color2"></span>
+                                <span class="color-dot color3"></span>
+                            </span>
+                            <span class="latest-products__prices">
+                                <span class="latest-products__price">$42.00</span>
+                                <span class="latest-products__price--old">$65.00</span>
+                            </span>
+                        </div>
+                    </div>
+
+                      <div class="col-md-3 latest-products__item">
+                        <div class="latest-products__img-wrapper position-relative">
+                            <img src="./images/image 23.png" alt="Comfort Handy Craft" class="latest-products__img" />
+                            <div class="latest-products__actions">
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="latest-products__action-btn"><i class="fa-regular fa-heart"></i></button>
+                                <button class="latest-products__action-btn"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="latest-products__info">
+                            <span class="latest-products__name">Comfort Handy Craft</span>
+                            <span class="product-colors">
+                                <span class="color-dot color1"></span>
+                                <span class="color-dot color2"></span>
+                                <span class="color-dot color3"></span>
+                            </span>
+                            <span class="latest-products__prices">
+                                <span class="latest-products__price">$42.00</span>
+                                <span class="latest-products__price--old">$65.00</span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
         </div>
 
         <!-- Brand logos -->

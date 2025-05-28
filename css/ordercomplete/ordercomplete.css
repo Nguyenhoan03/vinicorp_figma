@@ -1,0 +1,106 @@
+.order-complete-section {
+    background: #fff;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 0 80px 0;
+}
+
+.order-complete-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.order-complete-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    position: relative;
+}
+
+.order-complete-icon--left .order-complete-dash {
+    width: 2px;
+    height: 180px;
+    border-left: 2px dashed #E5E5E5;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+.order-complete-icon--right .order-complete-checklist {
+    width: 250px;
+    height: 2px;
+    border-right: 2px dashed #E5E5E5;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+
+.order-complete-icon--right {
+    align-items: flex-end;
+    justify-content: flex-end;
+    min-width: 100px;
+}
+
+.order-complete-content {
+    flex: 1;
+    min-width: 260px;
+    max-width: 420px;
+    margin: 0 32px;
+}
+
+.order-complete-check img {
+    background: #F6F7FB;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 4px 18px 0 rgba(40, 40, 40, 0.07);
+}
+
+.order-complete-title {
+    color: #1D3178;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.order-complete-desc {
+    color: #8A8FB9;
+    font-size: 1rem;
+    max-width: 420px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.order-complete-btn {
+    background: #FB2E86;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 12px 36px;
+    border: none;
+    transition: background 0.2s;
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+.order-complete-btn:hover,
+.order-complete-btn:focus {
+    background: #e62e73;
+    color: #fff;
+}
+
+/* @media (max-width: 991.98px) {
+    .order-complete-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 12px;
+    }
+
+  
+} */

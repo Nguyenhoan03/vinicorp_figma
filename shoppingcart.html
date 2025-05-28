@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma to HTML</title>
+    <link rel="stylesheet" href="css/shoppingcart/shoppingcart.css">
+    <link rel="stylesheet" href="css/home/header.css">
+    <link rel="stylesheet" href="css/banner_shoplist/banner_shoplist.css">
+    <!-- <link rel="stylesheet" href="css/home/banner.css"> -->
+    <link rel="stylesheet" href="css/home/footer.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+    <header>
+        <!-- Top bar desktop/tablet -->
+        <div class="top-bar d-none d-lg-block">
+            <div class="container">
+                <div class="row align-items-center top-bar-content">
+                    <div class="col-md-6 d-flex align-items-center top-bar-left gap-3">
+                        <span><i class="fa-regular fa-envelope"></i> mhhasanul@gmail.com</span>
+                        <span><i class="fa-solid fa-phone"></i> (12345)67890</span>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-md-end align-items-center top-bar-right gap-3">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle text-white text-decoration-none d-flex align-items-center gap-1"
+                                href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                English <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                                <li><a class="dropdown-item" href="#">Vietnamese</a></li>
+                                <li><a class="dropdown-item" href="#">Japan</a></li>
+                                <li><a class="dropdown-item" href="#">Korea</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle text-white text-decoration-none d-flex align-items-center gap-1"
+                                href="#" role="button" id="dropdownCurrency" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                USD <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownCurrency">
+                                <li><a class="dropdown-item" href="#">VNĐ</a></li>
+                                <li><a class="dropdown-item" href="#">Won</a></li>
+                                <li><a class="dropdown-item" href="#">Man</a></li>
+                            </ul>
+                        </div>
+                        <span><i class="fa-regular fa-user"></i> Login</span>
+                        <span><i class="fa-regular fa-heart"></i> Wishlist</span>
+                        <span><i class="fa-solid fa-cart-shopping"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top bar mobile -->
+        <div class="top-bar-mobile d-flex d-lg-none justify-content-between align-items-center px-3 py-1"
+            style="background:#a259d9;color:#fff;font-size:15px;">
+            <span><i class="fa-regular fa-envelope"></i> nmh@gmail.com </span>
+            <span class="span_phonenumber"><i class="fa-solid fa-phone"></i> (12345)67890</span>
+            <span class="dropdown dropdown-toggle" id="dropdownLanguage" data-bs-toggle="dropdown"> English <i
+                    class="fa-solid fa-chevron-down"></i>
+                <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                    <li><a class="dropdown-item" href="#">Vietnamese</a></li>
+                    <li><a class="dropdown-item" href="#">Japan</a></li>
+                    <li><a class="dropdown-item" href="#">Korea</a></li>
+                </ul>
+            </span>
+            <span><i class="fa-regular fa-heart"></i> Wishlist</span>
+            <span><i class="fa-solid fa-cart-shopping"></i></span>
+        </div>
+        <!-- Nav bar -->
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row mobile_setting align-items-center nav-bar-content d-flex">
+                    <!-- Mobile header -->
+                    <div class="d-flex mobile__header d-lg-none justify-content-between align-items-center py-2">
+                        <!-- Hamburger left: mở offcanvas menu -->
+                        <button class="navbar-toggler border-0 bg-transparent p-0 ms-2" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                            <span class="fa-solid fa-bars fs-2"></span>
+                        </button>
+                        <!-- Logo center -->
+                        <div class="logo text-center flex-grow-1" style="font-size:2rem;font-weight:bold;">Hekto</div>
+                        <!-- Icons right -->
+                        <div class="d-flex align-items-center gap-3 me-2">
+                            <a href="#" class="text-dark"><i class="fa-regular fa-user fs-4"></i></a>
+                            <a href="#" class="text-dark"><i class="fa-solid fa-magnifying-glass fs-4"></i></a>
+                        </div>
+                    </div>
+                    <!-- Desktop/tablet header -->
+                    <div class="col-6 col-lg-1 logo logo_desktop d-none d-lg-block">Hekto</div>
+                    <!-- <div class="col-6 d-lg-none text-end d-none d-md-block">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavCollapse" aria-controls="mainNavCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div> -->
+                    <div class="col-12 col-lg-7 d-none d-md-block">
+                        <nav class="main-nav collapse d-lg-flex align-items-center gap-4" id="mainNavCollapse">
+                            <div class="dropdown">
+                                <a href="#" class="active dropdown-toggle" id="dropdownHome" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Home <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownHome">
+                                    <li><a class="dropdown-item" href="./home.html">Home page</a></li>
+                                    <li><a class="dropdown-item" href="./shoplist.html">Shoplist</a></li>
+                                    <li><a class="dropdown-item" href="./productdetail.html">Product detail</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Pages</a>
+                            <a href="#">Products</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Shop</a>
+                            <a href="#">Contact</a>
+                        </nav>
+                    </div>
+                    <div class="col-12 col-lg-3 search-box__icon d-none d-lg-flex justify-content-lg-end mt-3 mt-lg-0">
+                        <form class="search-box d-flex w-100">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Offcanvas menu tab cho mobile -->
+        <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasMenu"
+            aria-labelledby="offcanvasMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <nav class="nav flex-column gap-2">
+                    <a href="#" class="active dropdown-toggle" id="dropdownHome" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Home <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownHome">
+                        <li><a class="dropdown-item" href="./home.html">Home page</a></li>
+                        <li><a class="dropdown-item" href="./shoplist.html">Shoplist</a></li>
+                        <li><a class="dropdown-item" href="./productdetail.html">Product detail</a></li>
+                    </ul>
+                    <a class="nav-link" href="#">Pages</a>
+                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="#">Shop</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main>
+        <div class="banner-shoplist">
+            <div class="banner-shoplist__content container align-items-center">
+                <p class="banner-shoplist__title">Shopping Cart</p>
+                <ul class="d-flex gap-2 text-align-start">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Page</a></li>
+                    <li><a href="/contact.html" class="breadcrumb-link">Shopping Cart</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <link rel="stylesheet" href="css/shoppingcart/shoppingcart.css">
+            <div class="shopping-cart-section py-5">
+                <div class="container">
+                    <div class="row">
+                        <!-- Cart Table -->
+                        <div class="col-lg-8">
+                            <form>
+                                <div class="table-responsive">
+                                    <table class="table align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th class="fw-bold cart-title">Product</th>
+                                                <th class="fw-bold cart-title">Price</th>
+                                                <th class="fw-bold cart-title">Quantity</th>
+                                                <th class="fw-bold cart-title">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="./images/Rectangle 34.png" alt="Product"
+                                                            class="cart-img">
+                                                        <div>
+                                                            <div class="cart-product-name"><a href=""> Ur diam consequat
+                                                                </a></div>
+                                                            <div class="cart-product-desc">Color: Brown</div>
+                                                            <div class="cart-product-desc">Size: XL</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-price">$32.00</td>
+                                                <td>
+                                                    <div class="cart-qty-group">
+                                                        <button type="button" class="qty-btn qty-btn-minus">-</button>
+                                                        <span class="cart-qty-value">1</span>
+                                                        <button type="button" class="qty-btn qty-btn-plus">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-total">£32.00 </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="./images/Rectangle 35.png" alt="Product"
+                                                            class="cart-img">
+                                                        <div>
+                                                            <div class="cart-product-name"><a href=""> Vel faucibus
+                                                                    posuere </a></div>
+                                                            <div class="cart-product-desc">Color: Brown</div>
+                                                            <div class="cart-product-desc">Size: XL</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-price">$32.00</td>
+                                                <td>
+                                                    <div class="cart-qty-group">
+                                                        <button type="button" class="qty-btn qty-btn-minus">-</button>
+                                                        <span class="cart-qty-value">1</span>
+                                                        <button type="button" class="qty-btn qty-btn-plus">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-total">£32.00 </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="./images/Rectangle 36.png" alt="Product"
+                                                            class="cart-img">
+                                                        <div>
+                                                            <div class="cart-product-name"><a href=""> Ac vitae
+                                                                    vestibulum </a></div>
+                                                            <div class="cart-product-desc">Color: Brown</div>
+                                                            <div class="cart-product-desc">Size: XL</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-price">$32.00</td>
+                                                <td>
+                                                    <div class="cart-qty-group">
+                                                        <button type="button" class="qty-btn qty-btn-minus">-</button>
+                                                        <span class="cart-qty-value">1</span>
+                                                        <button type="button" class="qty-btn qty-btn-plus">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-total">£32.00 </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="./images/Rectangle 34.png" alt="Product"
+                                                            class="cart-img">
+                                                        <div>
+                                                            <div class="cart-product-name"><a href=""> Elit massa diam
+                                                                </a></div>
+                                                            <div class="cart-product-desc">Color: Brown</div>
+                                                            <div class="cart-product-desc">Size: XL</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-price">$32.00</td>
+                                                <td>
+                                                    <div class="cart-qty-group">
+                                                        <button type="button" class="qty-btn qty-btn-minus">-</button>
+                                                        <span class="cart-qty-value">1</span>
+                                                        <button type="button" class="qty-btn qty-btn-plus">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-total">£32.00 </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="./images/Rectangle 35.png" alt="Product"
+                                                            class="cart-img">
+                                                        <div>
+                                                            <div class="cart-product-name"><a href=""> Proin pharetra
+                                                                    elementum </a></div>
+                                                            <div class="cart-product-desc">Color: Brown</div>
+                                                            <div class="cart-product-desc">Size: XL</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-price">$32.00</td>
+                                                <td>
+                                                    <div class="cart-qty-group">
+                                                        <button type="button" class="qty-btn qty-btn-minus">-</button>
+                                                        <span class="cart-qty-value">1</span>
+                                                        <button type="button" class="qty-btn qty-btn-plus">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-total">£32.00 </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="./images/Rectangle 36.png" alt="Product"
+                                                            class="cart-img">
+                                                        <div>
+                                                            <div class="cart-product-name"><a href=""> Ac vitae
+                                                                    vestibulum </a></div>
+                                                            <div class="cart-product-desc">Color: Brown</div>
+                                                            <div class="cart-product-desc">Size: XL</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-price">$32.00</td>
+                                                <td>
+                                                    <div class="cart-qty-group">
+                                                        <button type="button" class="qty-btn qty-btn-minus">-</button>
+                                                        <span class="cart-qty-value">1</span>
+                                                        <button type="button" class="qty-btn qty-btn-plus">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-total">£32.00 </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="./images/Rectangle 36.png" alt="Product"
+                                                            class="cart-img">
+                                                        <div>
+                                                            <div class="cart-product-name"><a href=""> Ac vitae
+                                                                    vestibulum </a></div>
+                                                            <div class="cart-product-desc">Color: Brown</div>
+                                                            <div class="cart-product-desc">Size: XL</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-price">$32.00</td>
+                                                <td>
+                                                    <div class="cart-qty-group">
+                                                        <button type="button" class="qty-btn qty-btn-minus">-</button>
+                                                        <span class="cart-qty-value">1</span>
+                                                        <button type="button" class="qty-btn qty-btn-plus">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-total">£32.00 </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn cart-btn-update">Update Cart</button>
+                                    <button type="button" class="btn cart-btn-clear">Clear Cart</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-4 shopping-cart-section__right">
+                            <h5 class="cart-totals-title text-center mb-4">Cart Totals</h5>
+                            <div class="cart-totals-box mb-4">
+                                <div class="d-flex justify-content-between mb-2 border-bottom">
+                                    <span class="cart-totals-label">Subtotals:</span>
+                                    <span class="cart-totals-value">£219.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2 border-bottom">
+                                    <span class="cart-totals-label">Totals:</span>
+                                    <span class="cart-totals-value">£325.00</span>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="cart-totals-note"><i class="fa fa-check-circle"></i> Shipping &amp;
+                                        taxes calculated at checkout</span>
+                                </div>
+                                <button class="btn cart-btn-checkout w-100">Proceed To Checkout</button>
+                            </div>
+                            <h6 class="cart-calc-title text-center mb-4">Calculate Shopping</h6>
+                            <div class="cart-calc-box">
+                                <input type="text" class="form-control mb-2" placeholder="Bangladesh">
+                                <input type="text" class="form-control mb-2" placeholder="Mirpur Dhaka - 1200">
+                                <input type="text" class="form-control mb-3" placeholder="Postal Code">
+                                <button class="btn cart-btn-calc w-100">Calculate Shipping</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="fade-right reveal brand mt-5 mb-5">
+            <div class="brand-logos d-flex justify-content-between align-items-center my-5"
+                style="width:85%;margin: auto;">
+                <a href="https://fashionlive.com" target="_blank">
+                    <img src="./images/Screenshot 2025-05-20 153723.png" alt="Fashion Live"
+                        class="brand-logo img-fluid" />
+                </a>
+                <a href="https://handcrafted.com" target="_blank">
+                    <img src="./images/Screenshot 2025-05-20 153816.png" alt="Hand Crafted"
+                        class="brand-logo img-fluid" />
+                </a>
+                <a href="https://mestonix.com" target="_blank">
+                    <img src="./images/Screenshot 2025-05-20 153833.png" alt="Mestonix" class="brand-logo img-fluid" />
+                </a>
+                <a href="https://sunshine.com" target="_blank">
+                    <img src="./images/Screenshot 2025-05-20 153852.png" alt="Sunshine" class="brand-logo img-fluid" />
+                </a>
+                <a href="https://pure.com" target="_blank">
+                    <img src="./images/Screenshot 2025-05-20 153911.png" alt="Pure" class="brand-logo img-fluid" />
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="bg-light text-secondary mt-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-4">
+                    <h3 class="h4 fw-bold mb-3 text-dark">Hekto</h3>
+                    <div class="mb-4">
+                        <p class="mb-2">Đăng ký nhận tin:</p>
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter Email Address" class="form-control">
+                            <button class="btn text-white" style="background-color: #FF1B6A;">Sign Up</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="fw-semibold">Contact Info</p>
+                        <p class="small">17 Princess Road, London, Greater London NW1 8JR, UK</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-2">
+                    <h4 class="h6 fw-semibold mb-3 text-dark">Categories</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Laptops & Computers</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Cameras &
+                                Photography</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Smart Phones &
+                                Tablets</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Video Games &
+                                Consoles</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Waterproof
+                                Headphones</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <h4 class="h6 fw-semibold mb-3 text-dark">Customer Care</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">My Account</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Discount</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Returns</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Orders History</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Order Tracking</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <h4 class="h6 fw-semibold mb-3 text-dark">Pages</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Browse the Shop</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Category</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Pre-Built Pages</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Visual Composer
+                                Elements</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WooCommerce Pages</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="footer-text">&copy; Webecy - All Rights Reserved</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/shoppingcart/shoppingcart.js"></script>
+
+
+
+
+</body>
+
+</html>

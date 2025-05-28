@@ -1,0 +1,275 @@
+:root {
+  --title-color: #1D3178;
+  --text-color: #C1C8E1;
+  --font-family: 'Josefin Sans', sans-serif;
+  --background-box: #F8F8FD;
+  --font-size-title: 2.25rem;
+  --font-size-content: 1rem;
+  --purple: #7E33E0;
+  --blue: #2F1AC4;
+  --cyan: #38C8F8;
+  --pink: #FB2E86;
+  --orange: #FFB265;
+  --green: #3FD0B4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+
+
+
+.hecto_demo {
+    width:100%!important;
+}
+
+.checkout-form {
+  background: var(--background-box);
+  padding: 2rem;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.breadcrumbs {
+  margin: 0.5rem 0 2rem;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.hecto_demo__title{
+    color: var(--title-color);
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-header h3 {
+    font-size: 1.125rem;
+    color: var(--title-color);
+    font-family: var(--font-family);
+}
+
+.section-header a {
+  color: var(--text-color)!important;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-family: 'Lato';
+}
+
+.section h3 {
+  margin-bottom: 1rem;
+  color: var(--title-color);
+  font-size: 1.125rem;
+  font-family: var(--font-family);
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0.5rem 0;
+  border: none;
+  border-bottom: 2px solid #C1C8E1;
+  border-radius: 0;
+  background: transparent;
+  font-size: var(--font-size-content);
+  color: var(--title-color);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.checkbox-container {
+    color: #8A91AB;
+    font-size: 12px;
+    padding-top: 1rem;
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-bottom: 2px solid var(--title-color);
+}
+input[type="checkbox"] {
+    accent-color: var(--green);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: #C1C8E1;
+  opacity: 1;
+  font-weight: 400;
+}
+p.title {
+    margin-bottom: 0!important;
+}
+
+.name-fields,
+.location-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.name-fields input,
+.location-fields input {
+  flex: 1;
+}
+
+.cart-totals-box {
+    background: #F4F4FC;
+    border-radius: 8px;
+    padding: 32px 24px;
+}
+
+.cart-totals-title {
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 20px;
+    
+}
+
+.cart-totals-label {
+    font-weight: 600;
+    color: #223263;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.cart-totals-value {
+    color: #223263;
+}
+
+.cart-totals-note {
+    font-size: 13px;
+    color: #3FD0B4;
+}
+
+.cart-btn-checkout {
+    background: #27AE60!important;
+    color: #fff!important;
+    font-weight: 500;
+}
+.continue-btn {
+  background: var(--pink);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cart-summary {
+  width: 30%;
+}
+
+.items {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  
+  border-bottom: 1px solid rgb(201, 201, 201);
+  box-shadow: 0 2px 4px rgba(226, 223, 223, 0.1);
+}
+
+.item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.item-details {
+  flex-grow: 1;
+  padding-top: 0.5rem;
+}
+
+.item-details .title {
+  font-size: 0.875rem;
+  
+}
+
+.item-details .desc {
+  font-size: 0.8rem;
+  color: #A1A8C1;
+  font-family: var(--font-family);
+}
+
+
+.price {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--title-color);
+}
+
+.totals {
+  background: var(--background-box);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.totals .subtotal,
+.totals .total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-content);
+  color: var(--title-color);
+}
+
+.totals .note {
+  font-size: 0.8rem;
+  color: var(--green);
+  margin-bottom: 1rem;
+}
+
+.checkout-btn {
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.row-inputs {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.row-inputs input {
+  flex: 1;
+  margin: 0;
+}
+.section input[type="text"] {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 575.98px) {
+    .hecto_demo {
+        margin: auto!important;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

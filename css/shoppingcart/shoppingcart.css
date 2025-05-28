@@ -1,0 +1,249 @@
+:root {
+    --title-color: #1D3178;
+    --text-color: #8A8FB9;
+    --font-family: 'Josefin Sans', sans-serif;
+    --background-box: #F8F8FD;
+    --font-size-title: 2.25rem;
+    --font-size-content: 1rem;
+    --purple: #7E33E0;
+    --blue: #2F1AC4;
+    --cyan: #38C8F8;
+    --pink: #FB2E86;
+    --orange: #FFB265;
+    --green: #3FD0B4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: var(--font-family);
+}
+
+.shopping-cart-section {
+    background: #fff;
+}
+
+.cart-title {
+    color: var(--title-color)!important;
+    font-size: 20px;
+    font-family: var(--font-family);
+}
+
+.cart-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+   
+}
+
+.cart-product-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+.cart-product-name a {
+    text-decoration: none;
+    color: black;
+}
+
+.cart-product-desc {
+    font-size: 13px;
+    color: #8A8FB9;
+}
+
+.cart-price,
+.cart-total {
+    color: var(--title-color)!important;
+    font-size: 14px;
+}
+
+.cart-qty {
+    width: 70px;
+}
+
+.cart-btn-update,
+.cart-btn-clear {
+    background: #FB2E86;
+    color: #fff;
+    min-width: 160px;
+    font-weight: 500;
+}
+
+.cart-btn-clear {
+    background: #FB2E86;
+}
+.cart-btn-clear:hover {
+    background: #FB2E86;
+    color: #fff;
+}
+.cart-btn-update:hover {
+    background: #FB2E86;
+    color: #fff;
+}
+
+.cart-totals-box {
+    background: #F4F4FC;
+    border-radius: 8px;
+    padding: 32px 24px;
+}
+
+.cart-totals-title {
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 20px;
+    
+}
+
+.cart-totals-label {
+    font-weight: 600;
+    color: #223263;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.cart-totals-value {
+    color: #223263;
+}
+
+.cart-totals-note {
+    font-size: 13px;
+    color: #3FD0B4;
+}
+
+.cart-btn-checkout {
+    background: #27AE60;
+    color: #fff;
+    font-weight: 500;
+}
+
+.cart-calc-box {
+    background: #F4F4FC;
+    border-radius: 8px;
+    padding: 32px 24px;
+}
+
+/* Calculate Shopping box */
+.cart-calc-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    color: #23236A;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cart-calc-box {
+    background: #f7f7fb;
+    border-radius: 6px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: none;
+    border: none;
+}
+
+.cart-calc-box input.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #e3e3ee;
+    border-radius: 0;
+    font-size: 1rem;
+    color: #23236A;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+.cart-calc-box input.form-control::placeholder {
+    color: #b5b5c3;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.cart-btn-calc {
+    background: #FB2E86;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    border: none;
+    transition: background 0.2s;
+    width: 60%;
+}
+
+.cart-btn-calc:hover {
+    background: #e0135b;
+    color: #fff;
+}
+
+.cart-qty-group {
+    display: inline-flex;
+    align-items: center;
+    background: #F6F7FB;
+    border-radius: 6px;
+    padding: 0 6px;
+    min-width: 80px;
+    height: 32px;
+    justify-content: center;
+    gap: 8px;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    color: #8A8FB9;
+    font-size: 18px;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.qty-btn:active,
+.qty-btn:focus {
+    background: #E7E7EF;
+    outline: none;
+}
+
+.cart-qty-value {
+    min-width: 18px;
+    text-align: center;
+    font-size: 15px;
+    color: #b4b4b4;
+    font-weight: 600;
+    display: inline-block;
+}
+.table-responsive {
+    max-height: 545px;
+    height: 100%;
+    overflow-y: scroll;
+
+
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: #f7f7fb;
+    border-radius: 8px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #e3e3ee;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 991.98px) {
+    .cart-btn-calc {
+        width:100%!important;
+    }
+    .shopping-cart-section__right {
+        margin-top: 2rem;
+    }
+    
+}

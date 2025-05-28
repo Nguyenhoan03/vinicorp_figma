@@ -1,0 +1,348 @@
+:root {
+    --title-color: #1D3178;
+    --text-color: #8A8FB9;
+    --font-family: 'Josefin Sans', sans-serif;
+    --background-box: #F8F8FD;
+    --font-size-title: 2.25rem;
+    --font-size-content: 1rem;
+    --purple: #7E33E0;
+    --blue: #2F1AC4;
+    --cyan: #38C8F8;
+    --pink: #FB2E86;
+    --orange: #FFB265;
+    --green: #3FD0B4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: var(--font-family);
+}
+
+.info__contacts {
+    margin-bottom: 2rem;
+}
+
+.info__contact__title {
+    font-size: var(--font-size-title);
+    color: var(--title-color);
+    font-family: var(--font-family);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.info__contact__content {
+    font-size: var(--font-size-content);
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    max-width: 90%;
+}
+
+.info__contact__colors {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.info__contact__color {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.info__contact__color:nth-child(1) {
+    background: var(--purple);
+}
+
+.info__contact__color:nth-child(2) {
+    background: var(--blue);
+}
+
+.info__contact__color:nth-child(3) {
+    background: var(--cyan);
+}
+
+.info__contact__ways {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.info__contact__way {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.info__contact__icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 2px;
+}
+
+.icon-purple {
+    background: var(--purple);
+}
+
+.icon-pink {
+    background: var(--pink);
+}
+
+.icon-orange {
+    background: var(--orange);
+}
+
+.icon-green {
+    background: var(--green);
+}
+
+.info__contact__way-title {
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 0 2px 0;
+    font-size: 1rem;
+}
+
+.info__contact__way-content {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.info__contact__ways {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    background: none;
+}
+
+.info__contact__row {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info__contact__way {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    min-width: 220px;
+}
+
+.info__contact__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 2px;
+}
+
+.icon-purple {
+    background: var(--purple);
+}
+
+.icon-pink {
+    background: var(--pink);
+}
+
+.icon-orange {
+    background: var(--orange);
+}
+
+.icon-green {
+    background: #3FD0B4;
+}
+
+.info__contact__way-title {
+    color: #8A8FB9;
+    margin: 0 0 2px 0;
+    font-size: 1rem;
+}
+
+.info__contact__way-content {
+    color: #8A8FB9;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+
+
+
+
+
+
+.contact-touch-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+}
+
+.contact-touch-title {
+    color: #1D3178;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-touch-desc {
+    color: #8A8FB9;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-touch-form .form-control {
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    font-size: 1rem;
+    background: #fff;
+    margin-bottom: 0;
+}
+
+.contact-touch-form textarea.form-control {
+    resize: none;
+}
+
+.contact-touch-btn {
+    background: #FB2E86;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0.5rem 2.5rem;
+    font-weight: 500;
+    border: none;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+
+.contact-touch-btn:hover,
+.contact-touch-btn:focus {
+    background: #e62e73 !important;
+    color: #fff !important;
+}
+
+.contact-touch-form button {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    background-color: var(--pink);
+}
+.contact-touch-form button a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: var(--font-family);
+}
+
+
+@media (max-width: 991.98px) {
+    .contact-touch-section {
+        padding: 2rem 1rem;
+    }
+    .contact-touch-img {
+        max-width: 320px;
+        margin-top: 2rem;
+    }
+
+     .info__contact__title {
+        font-size: 1.5rem;
+    }
+
+    .info__contact__content {
+        font-size: 0.95rem;
+    }
+
+     .info__contact__row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .info__contact__way {
+        min-width: unset;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-touch-title {
+        font-size: 1.3rem;
+    }
+    .contact-touch-section {
+        padding: 1rem 0.5rem;
+    }
+
+      .info__contact {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info__contact__content {
+        max-width: 100%;
+    }
+
+    .info__contact__ways {
+        margin-top: 2rem;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .info__contact__title {
+        font-size: 1.2rem;
+    }
+
+    .info__contact__content {
+        font-size: 0.9rem;
+    }
+
+    .info__contact__icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 776.98px) and (min-width: 575.98px) {
+    .info__contact {
+        flex-direction: column !important;
+    }
+    .info__contact > .col-sm-6 {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    .info__contact__title {
+        font-size: 1.4rem;
+        margin-bottom: 0.7rem;
+    }
+    .info__contact__content {
+        font-size: 0.98rem;
+    }
+    .info__contact__ways {
+        gap: 1rem;
+    }
+    .info__contact__way-title {
+        font-size: 1rem;
+    }
+    .info__contact__icon {
+        width: 1.2rem;
+        height: 1.2rem;
+        font-size: 0.9rem;
+    }
+    .info__contact__color {
+        width: 1rem;
+        height: 1rem;
+    }
+}

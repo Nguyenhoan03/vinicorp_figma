@@ -1,0 +1,118 @@
+:root {
+    --color-text: #9096B2;
+    --font-family: 'Josefin Sans', sans-serif;
+    --pink: #FB2E86;
+}
+
+main {
+    background-color: white;
+}
+
+.login-section {
+    min-height: 50vh;
+    background: white;
+}
+
+.login-box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px 0 rgba(40, 40, 40, 0.07);
+    padding: 48px 36px 36px 36px;
+    max-width: 544px;
+    width: 100%;
+    margin: 48px auto;
+}
+
+.login-title {
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 2.2rem;
+    color: #111;
+}
+
+.login-subtitle {
+    color: var(--color-text);
+    font-size: 1.08rem;
+    margin-bottom: 2rem;
+}
+
+.login-input {
+    border: 1px solid #E7E6EF;
+    border-radius: 4px;
+    height: 48px;
+    font-size: 1rem;
+    color: #151875;
+    background: #fff;
+    transition: border 0.2s;
+}
+
+.login-input:focus {
+    border-color: var(--color-text);
+    box-shadow: none;
+    outline: none;
+}
+
+.login-forgot {
+    color: var(--color-text);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.login-forgot:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background: #FB2E86;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    height: 48px;
+    border: none;
+    transition: background 0.2s;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+    background: #e62e73;
+    color: #fff;
+}
+
+.login-bottom-text {
+    color: var(--color-text);
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+.login-box input::placeholder {
+    color: var(--color-text);
+}
+.login-box button {
+    background-color: #FB2E86;
+    color: white;
+    font-size: 17px;
+}
+
+.login-create {
+    color: #FB2E86;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-create:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 575.98px) {
+    .login-box {
+        padding: 32px 12px 24px 12px;
+        max-width: 98vw;
+    }
+
+    .login-title {
+        font-size: 2rem;
+    }
+}

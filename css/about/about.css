@@ -1,0 +1,238 @@
+:root {
+    --title-color: #1D3178;
+    --text-color: #8A8FB9;
+    --font-family: 'Josefin Sans', sans-serif;
+    --background-box: #F8F8FD;
+    --font-size-title: 2.25rem;
+    --font-size-content: 1rem;
+    --purple: #7E33E0;
+    --blue: #2F1AC4;
+    --cyan: #38C8F8;
+    --pink: #FB2E86;
+    --orange: #FFB265;
+    --green: #3FD0B4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: var(--font-family);
+}
+
+
+.shopex-offer__card {
+    width: 100%;
+    max-width: 260px;
+    height: 320px;
+    background: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 12px;
+}
+
+.shopex-offer__card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+}
+
+.shopex-offer__card-content {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 32px 12px;
+}
+
+.shopex-offer__card-img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 24px;
+}
+
+.shopex-offer__card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2F1AC4;
+    margin-bottom: 12px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.shopex-offer__card-content span {
+    color: #8A8FB9;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+.shopex-offer__title {
+    color: #2F1AC4;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.about-intro-section button {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    background-color: var(--pink);
+    margin-top: 1rem;
+}
+
+.about-intro-section button a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: var(--font-family);
+}
+
+
+
+
+
+
+.about-client-section {
+    background: #F8F8FD;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.about-client-title {
+    color: #1D3178;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-client-avatars {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.about-client-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    object-fit: cover;
+
+    transition: opacity 0.2s, box-shadow 0.2s;
+    box-shadow: none;
+}
+
+.about-client-avatar.active {
+    transform: scale(1.1);
+
+    transition:
+        transform 1.4s cubic-bezier(0.25, 1, 0.5, 1),
+        box-shadow 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.about-client-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1D3178;
+}
+
+.about-client-role {
+    color: #8A8FB9;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.about-client-desc {
+    color: #8A8FB9;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.about-client-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.about-client-dots .dot {
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+    background: #E0E0E0;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.about-client-dots .dot.active {
+    background: #FB2E86;
+}
+
+.about-client-avatar.active {
+    /* border: 3px solid #7E33E0; */
+    box-shadow: 0 8px 32px rgba(40, 40, 40, 0.18);
+    transform: scale(1.15);
+    z-index: 2;
+    position: relative;
+    background: #fff;
+    margin-top: -0.3rem;
+}
+
+.contact-touch-btn:hover,
+.contact-touch-btn:focus {
+    background: #e62e73 !important;
+    color: #fff !important;
+}
+
+
+
+@media (max-width: 991.98px) {
+    .about-client-title {
+        font-size: 1.3rem;
+    }
+
+    .about-client-avatar {
+        width: 44px;
+        height: 44px;
+    }
+
+    .about-client-desc {
+        font-size: 0.95rem;
+    }
+
+    .about-intro-section button {
+        margin: auto;
+
+    }
+
+    .about-intro-section button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin: auto !important; */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-client-title {
+        font-size: 1.1rem;
+    }
+
+    .about-client-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .about-client-desc {
+        font-size: 0.9rem;
+    }
+}
