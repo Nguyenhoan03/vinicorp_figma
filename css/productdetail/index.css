@@ -8,18 +8,7 @@ main {
   padding-top: 127px;
 }
 
-header {
-  transition: opacity 0.2s;
-}
-
-header.header-fade {
-  opacity: 0.6;
-  transition: opacity 0.3s;
-}
-
-header.header-fade:hover {
-  opacity: 1;
-}
+ 
 
 :root {
  
